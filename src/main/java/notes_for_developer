@@ -1,0 +1,14 @@
+Medical records management system
+
+Admin Page
+
+Медицинская карта
+
+record_id----SERIAL PRIMARY KEY----Уникальный  идентификатор медицинской записи
+patient_id----INTEGER----Идентификатор пациента
+doctor_id----INTEGER----Идентификатор врача
+visit_date----DATE----Дата визита к врачу
+diagnosis----TEXT----Диагноз пациента
+treatment_plan----TEXT----План лечения
+created_at----TIMESTAMP----Дата создания записи
+
