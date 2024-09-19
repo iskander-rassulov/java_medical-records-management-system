@@ -14,6 +14,7 @@ import java.util.Objects;
 public class controller_main {
 
     func_current_date funcCurrentDate = new func_current_date();
+    func_user_profile funcUserProfile = new func_user_profile();
 
     public AnchorPane bottom_pane;
     public AnchorPane center_pane;
@@ -28,11 +29,8 @@ public class controller_main {
 
 
     public void initialize(){
-
         //Аватарка пользователя
-        ImageView image_icon_code = new ImageView(new Image(Objects.requireNonNull(getClass().getResourceAsStream("/com/example/medical_records_management_system/image/icon_1.jpg"))));
-        image_icon.setImage(image_icon_code.getImage());
-
+        funcUserProfile.setImageIcon(image_icon);
         //Инициализация даты
         funcCurrentDate.setText_current_date(text_current_date);
 

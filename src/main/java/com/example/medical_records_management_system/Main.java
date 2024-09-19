@@ -14,7 +14,7 @@ public class Main extends Application {
     public void start(Stage primaryStage) {
         try {
             // Загрузка FXML файла
-            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/com/example/medical_records_management_system/view_main.fxml")));
+            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/com/example/medical_records_management_system/view_login_page.fxml")));
 
 
 
