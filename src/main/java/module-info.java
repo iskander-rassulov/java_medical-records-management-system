@@ -11,6 +11,7 @@ module com.example.medical_records_management_system {
     requires com.almasb.fxgl.all;
     requires com.jfoenix;
     requires java.sql;
+    requires org.postgresql.jdbc;
 
     opens com.example.medical_records_management_system to javafx.fxml;
     exports com.example.medical_records_management_system;

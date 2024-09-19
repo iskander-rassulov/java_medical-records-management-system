@@ -1,5 +1,6 @@
 package com.example.medical_records_management_system;
 
+import com.example.medical_records_management_system.database.database_check_in;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -9,6 +10,8 @@ import javafx.stage.Stage;
 import java.util.Objects;
 
 public class Main extends Application {
+
+    database_check_in databaseCheckIn = new database_check_in();
 
     @Override
     public void start(Stage primaryStage) {
@@ -28,6 +31,7 @@ public class Main extends Application {
             e.printStackTrace();
         }
 
+        databaseCheckIn.displayAllDoctors();
     }
 
     public static void main(String[] args) {

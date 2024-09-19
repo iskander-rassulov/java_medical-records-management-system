@@ -9,7 +9,7 @@ import java.sql.Statement;
 public class database_handler {
 
     // Метод для установки соединения с базой данных
-    private Connection getConnection() {
+    Connection getConnection() {
         Connection connection = null;
         try {
             // Загружаем драйвер PostgreSQL
