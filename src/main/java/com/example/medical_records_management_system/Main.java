@@ -16,8 +16,6 @@ public class Main extends Application {
             // Загрузка FXML файла
             Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/com/example/medical_records_management_system/view_login_page.fxml")));
 
-
-
             // Установка сцены
             Scene scene = new Scene(root);
 
@@ -29,6 +27,7 @@ public class Main extends Application {
         } catch (Exception e) {
             e.printStackTrace();
         }
+
     }
 
     public static void main(String[] args) {
