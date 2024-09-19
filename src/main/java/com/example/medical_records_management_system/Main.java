@@ -1,4 +1,4 @@
-package com.example.medica_records_management_system;
+package com.example.medical_records_management_system;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -14,7 +14,9 @@ public class Main extends Application {
     public void start(Stage primaryStage) {
         try {
             // Загрузка FXML файла
-            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("view_main.fxml")));
+            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/com/example/medical_records_management_system/view_main.fxml")));
+
+
 
             // Установка сцены
             Scene scene = new Scene(root);

@@ -1,5 +1,4 @@
-module com.example.medica_records_management_system {
-    requires javafx.controls;
+module com.example.medical_records_management_system {
     requires javafx.fxml;
     requires javafx.web;
 
@@ -10,7 +9,8 @@ module com.example.medica_records_management_system {
     requires org.kordamp.bootstrapfx.core;
     requires eu.hansolo.tilesfx;
     requires com.almasb.fxgl.all;
+    requires com.jfoenix;
 
-    opens com.example.medica_records_management_system to javafx.fxml;
-    exports com.example.medica_records_management_system;
+    opens com.example.medical_records_management_system to javafx.fxml;
+    exports com.example.medical_records_management_system;
 }
