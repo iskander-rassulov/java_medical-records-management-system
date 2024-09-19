@@ -10,7 +10,10 @@
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.medical_records_management_system.controller_main">
 
    <bottom>
-      <AnchorPane fx:id="bottom_pane" prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+      <AnchorPane fx:id="bottom_pane" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #01161e;" BorderPane.alignment="CENTER">
+         <children>
+            <Text fx:id="text_current_date" fill="WHITE" layoutX="559.0" layoutY="24.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-text-alignment: CENTER;" text="19 September, 16:32 [Monday]" textAlignment="CENTER" AnchorPane.bottomAnchor="12.0" AnchorPane.leftAnchor="559.0" AnchorPane.rightAnchor="559.0" AnchorPane.topAnchor="12.0" />
+         </children></AnchorPane>
    </bottom>
 
    <center>
@@ -18,7 +21,7 @@
    </center>
 
    <left>
-      <AnchorPane fx:id="left_pane" prefHeight="680.0" prefWidth="300.0" style="-fx-background-color: #90e0ef;" BorderPane.alignment="CENTER">
+      <AnchorPane fx:id="left_pane" prefHeight="680.0" prefWidth="300.0" style="-fx-background-color: #0077b6;" BorderPane.alignment="CENTER">
          <children>
             <ImageView fx:id="image_icon" fitHeight="120.0" fitWidth="120.0" layoutX="90.0" layoutY="60.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="90.0" AnchorPane.rightAnchor="90.0" AnchorPane.topAnchor="70.0" />
 
@@ -28,18 +31,18 @@
                </font>
             </Text>
 
-            <JFXButton fx:id="button_search_records" layoutX="25.0" layoutY="250.0" minWidth="250.0" prefHeight="30.0" prefWidth="250.0" style="-fx-background-color: transparent; -fx-background-radius: 30; -fx-border-radius: 30; -fx-text-alignment: left;" text="🔍 Search records" textAlignment="LEFT" textFill="WHITE" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="26.0" AnchorPane.topAnchor="250.0" />
+            <JFXButton fx:id="button_search_records" alignment="CENTER_LEFT" layoutX="25.0" layoutY="250.0" minWidth="250.0" prefHeight="30.0" prefWidth="250.0" style="-fx-background-color: transparent; -fx-background-radius: 30; -fx-border-radius: 30;" text="🔍 Search records" textFill="WHITE" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="26.0" AnchorPane.topAnchor="250.0" />
 
-            <JFXButton fx:id="button_patient_card" layoutX="25.0" layoutY="291.0" minWidth="250.0" prefHeight="30.0" prefWidth="250.0" style="-fx-background-color: transparent; -fx-background-radius: 30; -fx-border-radius: 30; -fx-text-alignment: left;" text="👨 Patien card" textAlignment="LEFT" textFill="WHITE" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="26.0" AnchorPane.topAnchor="290.0" />
+            <JFXButton fx:id="button_patient_card" alignment="CENTER_LEFT" layoutX="25.0" layoutY="291.0" minWidth="250.0" prefHeight="30.0" prefWidth="250.0" style="-fx-background-color: transparent; -fx-background-radius: 30; -fx-border-radius: 30; -fx-text-alignment: left;" text="👨 Patient card" textFill="WHITE" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="26.0" AnchorPane.topAnchor="290.0" />
 
-            <JFXButton fx:id="button_calendar" layoutX="35.0" layoutY="296.0" minWidth="250.0" prefHeight="30.0" prefWidth="250.0" style="-fx-background-color: transparent; -fx-background-radius: 30; -fx-border-radius: 30; -fx-text-alignment: left;" text="📅 Calendar" textAlignment="LEFT" textFill="WHITE" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="26.0" AnchorPane.topAnchor="330.0" />
+            <JFXButton fx:id="button_calendar" alignment="CENTER_LEFT" layoutX="35.0" layoutY="296.0" minWidth="250.0" prefHeight="30.0" prefWidth="250.0" style="-fx-background-color: transparent; -fx-background-radius: 30; -fx-border-radius: 30; -fx-text-alignment: left;" text="📅  Calendar" textFill="WHITE" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="26.0" AnchorPane.topAnchor="330.0" />
 
-            <JFXButton fx:id="button_manage_records" layoutX="45.0" layoutY="306.0" minWidth="250.0" prefHeight="30.0" prefWidth="250.0" style="-fx-background-color: transparent; -fx-background-radius: 30; -fx-border-radius: 30; -fx-text-alignment: LEFT;" text="📅 Manage records" textAlignment="LEFT" textFill="WHITE" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="26.0" AnchorPane.topAnchor="370.0" />
+            <JFXButton fx:id="button_manage_records" alignment="CENTER_LEFT" layoutX="45.0" layoutY="306.0" minWidth="250.0" prefHeight="30.0" prefWidth="250.0" style="-fx-background-color: transparent; -fx-background-radius: 30; -fx-border-radius: 30; -fx-text-alignment: LEFT;" text="📅  Manage records" textFill="WHITE" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="26.0" AnchorPane.topAnchor="370.0" />
 
          </children></AnchorPane>
    </left>
 
    <right>
-      <AnchorPane fx:id="right_pane" prefHeight="680.0" prefWidth="380.0" BorderPane.alignment="CENTER" />
+      <AnchorPane fx:id="right_pane" prefHeight="680.0" prefWidth="380.0" style="-fx-background-color: #457b9d;" BorderPane.alignment="CENTER" />
    </right>
 </BorderPane>
