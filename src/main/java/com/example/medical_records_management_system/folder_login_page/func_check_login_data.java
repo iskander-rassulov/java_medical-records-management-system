@@ -36,7 +36,6 @@ public class func_check_login_data {
             System.out.println("Пароль: " + doctorData.getPassword());
             System.out.println("Иконка: " + doctorData.getImageIcon());
             System.out.println("Специальность: " + doctorData.getSpeciality());
-
         } else {
             System.out.println("Пользователь не найден");
         }
