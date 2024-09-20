@@ -1,6 +1,6 @@
 package com.example.medical_records_management_system;
 
-import com.example.medical_records_management_system.database.database_check_in;
+import com.example.medical_records_management_system.folder_database.database_check_in;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;

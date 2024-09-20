@@ -1,4 +1,4 @@
-package com.example.medical_records_management_system.database;
+package com.example.medical_records_management_system.folder_database;
 
 public class database_configuration {
     // Database configuration parameters

@@ -1,4 +1,4 @@
-package com.example.medical_records_management_system.login_page;
+package com.example.medical_records_management_system.folder_login_page;
 
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;

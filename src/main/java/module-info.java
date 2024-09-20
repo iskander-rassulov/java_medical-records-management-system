@@ -15,8 +15,12 @@ module com.example.medical_records_management_system {
 
     opens com.example.medical_records_management_system to javafx.fxml;
     exports com.example.medical_records_management_system;
-    exports com.example.medical_records_management_system.database;
-    opens com.example.medical_records_management_system.database to javafx.fxml;
-    exports com.example.medical_records_management_system.login_page;
-    opens com.example.medical_records_management_system.login_page to javafx.fxml;
+    exports com.example.medical_records_management_system.folder_database;
+    opens com.example.medical_records_management_system.folder_database to javafx.fxml;
+    exports com.example.medical_records_management_system.folder_login_page;
+    opens com.example.medical_records_management_system.folder_login_page to javafx.fxml;
+    exports com.example.medical_records_management_system.folder_calendar;
+    opens com.example.medical_records_management_system.folder_calendar to javafx.fxml;
+    exports com.example.medical_records_management_system.folder_management;
+    opens com.example.medical_records_management_system.folder_management to javafx.fxml;
 }

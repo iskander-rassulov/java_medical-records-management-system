@@ -1,10 +1,8 @@
-package com.example.medical_records_management_system.database;
+package com.example.medical_records_management_system.folder_database;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Statement;
 
 public class database_handler {
 

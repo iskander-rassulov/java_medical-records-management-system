@@ -1,4 +1,4 @@
-package com.example.medical_records_management_system.database;
+package com.example.medical_records_management_system.folder_database;
 
 import java.sql.Connection;
 import java.sql.ResultSet;

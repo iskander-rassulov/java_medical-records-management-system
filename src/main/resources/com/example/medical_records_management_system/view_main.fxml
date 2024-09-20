@@ -38,6 +38,7 @@
             <JFXButton fx:id="button_calendar" alignment="CENTER_LEFT" layoutX="35.0" layoutY="296.0" minWidth="250.0" prefHeight="30.0" prefWidth="250.0" style="-fx-background-color: transparent; -fx-background-radius: 30; -fx-border-radius: 30; -fx-text-alignment: left;" text="📅  Calendar" textFill="WHITE" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="26.0" AnchorPane.topAnchor="330.0" />
 
             <JFXButton fx:id="button_manage_records" alignment="CENTER_LEFT" layoutX="45.0" layoutY="306.0" minWidth="250.0" prefHeight="30.0" prefWidth="250.0" style="-fx-background-color: transparent; -fx-background-radius: 30; -fx-border-radius: 30; -fx-text-alignment: LEFT;" text="📅  Manage records" textFill="WHITE" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="26.0" AnchorPane.topAnchor="370.0" />
+            <Text fx:id="text_speciality" fill="WHITE" layoutX="85.0" layoutY="219.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dentist" textAlignment="CENTER" AnchorPane.leftAnchor="75.0" AnchorPane.topAnchor="220.0" />
 
          </children></AnchorPane>
    </left>
