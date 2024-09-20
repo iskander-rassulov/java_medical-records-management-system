@@ -1,5 +1,6 @@
 package com.example.medical_records_management_system.folder_login_page;
 
+import com.example.medical_records_management_system.data_doctor;
 import com.jfoenix.controls.JFXButton;
 import javafx.scene.control.Hyperlink;
 import javafx.scene.control.PasswordField;
@@ -12,8 +13,7 @@ public class controller_login {
 
 
     func_login_image funcLoginImage = new func_login_image();
-    func_check_login_data funcCheckLoginData = new func_check_login_data();
-
+    data_doctor dataDoctor = new data_doctor();
     public AnchorPane pane_left;
     public Text text_sign_in;
     public TextField field_username;
@@ -30,8 +30,17 @@ public class controller_login {
 
         // Привязываем действие к кнопке
         button_sign_in.setOnAction(event -> {
-            funcCheckLoginData.checkLoginData(field_username, field_password);
+            boolean loginSuccessful = func_check_login_data.checkLoginData(field_username, field_password);
+
+            if (!loginSuccessful) {
+                // Показываем текст, если данные введены неверно
+                incorrect_data.setVisible(true);
+            }
         });
+
+
+
+
 
     }
 
