@@ -6,6 +6,7 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
+<?import javafx.scene.text.TextFlow?>
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.medical_records_management_system.controller_main">
 
@@ -25,12 +26,6 @@
          <children>
             <ImageView fx:id="image_icon" fitHeight="120.0" fitWidth="120.0" layoutX="90.0" layoutY="60.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="90.0" AnchorPane.rightAnchor="90.0" AnchorPane.topAnchor="70.0" />
 
-            <Text fx:id="text_full_name" fill="WHITE" layoutX="75.0" layoutY="209.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dr. Name Surname" textAlignment="CENTER" AnchorPane.leftAnchor="75.0" AnchorPane.rightAnchor="75.0" AnchorPane.topAnchor="200.0">
-               <font>
-                  <Font size="18.0" />
-               </font>
-            </Text>
-
             <JFXButton fx:id="button_search_records" alignment="CENTER_LEFT" layoutX="25.0" layoutY="250.0" minWidth="250.0" prefHeight="30.0" prefWidth="250.0" style="-fx-background-color: transparent; -fx-background-radius: 30; -fx-border-radius: 30;" text="🔍 Search records" textFill="WHITE" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="26.0" AnchorPane.topAnchor="270.0" />
 
             <JFXButton fx:id="button_patient_card" alignment="CENTER_LEFT" layoutX="25.0" layoutY="291.0" minWidth="250.0" prefHeight="30.0" prefWidth="250.0" style="-fx-background-color: transparent; -fx-background-radius: 30; -fx-border-radius: 30; -fx-text-alignment: left;" text="👨 Patient card" textFill="WHITE" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="26.0" AnchorPane.topAnchor="310.0" />
@@ -38,8 +33,20 @@
             <JFXButton fx:id="button_calendar" alignment="CENTER_LEFT" layoutX="35.0" layoutY="296.0" minWidth="250.0" prefHeight="30.0" prefWidth="250.0" style="-fx-background-color: transparent; -fx-background-radius: 30; -fx-border-radius: 30; -fx-text-alignment: left;" text="📅  Calendar" textFill="WHITE" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="26.0" AnchorPane.topAnchor="350.0" />
 
             <JFXButton fx:id="button_manage_records" alignment="CENTER_LEFT" layoutX="45.0" layoutY="306.0" minWidth="250.0" prefHeight="30.0" prefWidth="250.0" style="-fx-background-color: transparent; -fx-background-radius: 30; -fx-border-radius: 30; -fx-text-alignment: LEFT;" text="📅  Manage records" textFill="WHITE" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="26.0" AnchorPane.topAnchor="390.0" />
-            <Text fx:id="text_speciality" fill="WHITE" layoutX="85.0" layoutY="219.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dentist" textAlignment="CENTER" AnchorPane.leftAnchor="75.0" AnchorPane.topAnchor="220.0" />
+            <TextFlow fx:id="text_flow_full_name" layoutX="9.0" layoutY="200.0" prefHeight="30.0" prefWidth="300.0" textAlignment="CENTER" AnchorPane.leftAnchor="9.0" AnchorPane.rightAnchor="9.0" AnchorPane.topAnchor="200.0">
+               <children>
+                  <Text fx:id="text_full_name" fill="WHITE" strokeMiterLimit="0.0" strokeType="OUTSIDE" strokeWidth="0.0" text="NameSurname" textAlignment="CENTER">
+                     <font>
+                        <Font size="18.0" />
+                     </font></Text>
+               </children>
+            </TextFlow>
             <JFXButton fx:id="button_log_out" alignment="CENTER_LEFT" layoutX="55.0" layoutY="316.0" minWidth="250.0" prefHeight="30.0" prefWidth="250.0" style="-fx-background-color: transparent; -fx-background-radius: 30; -fx-border-radius: 30; -fx-text-alignment: LEFT;" text="⬅ Log out" textFill="WHITE" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="26.0" AnchorPane.topAnchor="620.0" />
+            <TextFlow layoutX="18.0" layoutY="228.0" prefHeight="20.0" prefWidth="300.0" textAlignment="CENTER" AnchorPane.leftAnchor="9.0" AnchorPane.rightAnchor="9.0" AnchorPane.topAnchor="222.0">
+               <children>
+                  <Text fx:id="text_speciality" fill="WHITE" strokeType="OUTSIDE" strokeWidth="10.0" text="Dentist" textAlignment="CENTER" />
+               </children>
+            </TextFlow>
 
          </children></AnchorPane>
    </left>

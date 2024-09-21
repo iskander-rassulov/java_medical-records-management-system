@@ -1,6 +1,7 @@
 package com.example.medical_records_management_system.folder_login_page;
 
 
+import com.example.medical_records_management_system.controller_main;
 import com.jfoenix.controls.JFXButton;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -56,7 +57,13 @@ public class controller_login {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/medical_records_management_system/view_main.fxml"));
             Parent root = loader.load();
 
-            // Получаем текущую сцену
+            // Получаем контроллер для главного окна
+            controller_main mainController = loader.getController();
+
+            // Передаем данные о докторе в контроллер
+            mainController.setDoctorData(func_check_login_data.getDoctorData());
+
+            // Устанавливаем сцену
             Stage stage = (Stage) button_sign_in.getScene().getWindow();
             stage.setScene(new Scene(root));
             stage.show();
@@ -64,6 +71,7 @@ public class controller_login {
             e.printStackTrace();
         }
     }
+
 
 
 }
