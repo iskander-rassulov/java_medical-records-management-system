@@ -1,18 +1,14 @@
-package com.example.medical_records_management_system;
+package com.example.medical_records_management_system.folder_main;
 
+import com.example.medical_records_management_system.data_doctor;
+import com.example.medical_records_management_system.func_current_date;
+import com.example.medical_records_management_system.func_user_profile;
 import com.jfoenix.controls.JFXButton;
-import javafx.scene.control.Label;
-import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.HBox;
 import javafx.scene.text.Text;
 import javafx.scene.text.TextFlow;
-
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
-import java.util.Locale;
-import java.util.Objects;
+import javafx.stage.Stage;
 
 public class controller_main {
 
@@ -46,6 +42,12 @@ public class controller_main {
     public void initialize(){
         //Инициализация даты
         funcCurrentDate.setText_current_date(text_current_date);
+
+        button_log_out.setOnAction(event -> {
+            func_log_out logOut = new func_log_out();
+            Stage stage = (Stage) button_log_out.getScene().getWindow();
+            logOut.logOut(stage);
+        });
 
     }
 

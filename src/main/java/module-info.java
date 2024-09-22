@@ -23,4 +23,6 @@ module com.example.medical_records_management_system {
     opens com.example.medical_records_management_system.folder_calendar to javafx.fxml;
     exports com.example.medical_records_management_system.folder_management;
     opens com.example.medical_records_management_system.folder_management to javafx.fxml;
+    exports com.example.medical_records_management_system.folder_main;
+    opens com.example.medical_records_management_system.folder_main to javafx.fxml;
 }

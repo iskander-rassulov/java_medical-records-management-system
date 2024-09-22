@@ -1,12 +1,8 @@
 package com.example.medical_records_management_system.folder_login_page;
 
 
-import com.example.medical_records_management_system.controller_main;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXCheckBox;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Hyperlink;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
@@ -15,11 +11,10 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
-import java.io.IOException;
-
 public class controller_login {
 
     func_login_image funcLoginImage = new func_login_image();
+    func_open_main_view funcOpenMainView = new func_open_main_view();
 
     public AnchorPane pane_left;
     public Text text_sign_in;
@@ -42,7 +37,8 @@ public class controller_login {
 
             if (loginSuccessful) {
                 // Меняем сцену на view_main.fxml
-                switchToMainView();
+                Stage stage = (Stage) button_sign_in.getScene().getWindow();
+                funcOpenMainView.switchToMainView(stage);
             } else {
                 // Показываем текст, если данные введены неверно
                 incorrect_data.setVisible(true);
@@ -50,29 +46,5 @@ public class controller_login {
         });
 
     }
-
-    // Метод для изменения сцены на view_main.fxml
-    private void switchToMainView() {
-        try {
-            // Загружаем view_main.fxml
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/medical_records_management_system/view_main.fxml"));
-            Parent root = loader.load();
-
-            // Получаем контроллер для главного окна
-            controller_main mainController = loader.getController();
-
-            // Передаем данные о докторе в контроллер
-            mainController.setDoctorData(func_check_login_data.getDoctorData());
-
-            // Устанавливаем сцену
-            Stage stage = (Stage) button_sign_in.getScene().getWindow();
-            stage.setScene(new Scene(root));
-            stage.show();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
-
 
 }
