@@ -1,6 +1,10 @@
 package com.example.medical_records_management_system.folder_database;
 
+import com.example.medical_records_management_system.data_medical_records;
+
 import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class database_handler {
 
@@ -51,5 +55,35 @@ public class database_handler {
 
         return imageUrl;
     }
+
+    // Метод для получения записей по doctor_id
+    public List<data_medical_records> getRecordsByDoctorId(int doctorId) {
+        List<data_medical_records> records = new ArrayList<>();
+        String query = "SELECT * FROM medical_records WHERE doctor_id = ?";
+
+        try (Connection connection = getConnection();
+             PreparedStatement preparedStatement = connection.prepareStatement(query)) {
+
+            preparedStatement.setInt(1, doctorId);
+            ResultSet resultSet = preparedStatement.executeQuery();
+
+            while (resultSet.next()) {
+                data_medical_records record = new data_medical_records();
+                record.setMedicalRecordId(resultSet.getInt("medical_record_id"));
+                record.setPatientId(resultSet.getInt("patient_id"));
+                record.setDoctorId(resultSet.getInt("doctor_id"));
+                record.setVisitDate(String.valueOf(resultSet.getDate("visit_date")).trim());
+                record.setDiagnosis(resultSet.getString("diagnosis").trim());
+                record.setTreatmentPlan(resultSet.getString("treatment_plan").trim());
+                records.add(record);
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return records;
+    }
+
 }
 

@@ -1,7 +1,7 @@
 package com.example.medical_records_management_system;
 
 public class data_doctor {
-    private int doctorId;
+    private static int doctorId;
     private String firstName;
     private String lastName;
     private String username;
@@ -10,7 +10,7 @@ public class data_doctor {
     private String speciality;
 
     // Геттеры и сеттеры для каждого поля
-    public int getDoctorId() {
+    public static int getDoctorId() {
         return doctorId;
     }
 
