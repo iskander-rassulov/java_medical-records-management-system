@@ -18,7 +18,7 @@
    </bottom>
 
    <center>
-      <AnchorPane fx:id="center_pane" prefHeight="680.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+      <AnchorPane fx:id="center_pane" prefHeight="680.0" prefWidth="600.0" BorderPane.alignment="CENTER" />
    </center>
 
    <left>

@@ -13,3 +13,6 @@ treatment_plan----TEXT----План лечения
 created_at----TIMESTAMP----Дата создания записи
 
 D:\JavaProjects\medical_records_management_system\src\main\resources\com\example\medical_records_management_system
+
+
+путь к fxmlкам: "/com/example/medical_records_management_system/view_login_page.fxml"

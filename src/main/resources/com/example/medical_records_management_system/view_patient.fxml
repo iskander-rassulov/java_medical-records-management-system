@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane prefHeight="680.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.medical_records_management_system.folder_patient.func_patient">
+   <children>
+      <Text layoutX="289.0" layoutY="300.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PATIENTS" />
+   </children>
+</AnchorPane>

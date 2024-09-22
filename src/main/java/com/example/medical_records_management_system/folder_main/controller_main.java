@@ -1,14 +1,21 @@
 package com.example.medical_records_management_system.folder_main;
 
 import com.example.medical_records_management_system.data_doctor;
+import com.example.medical_records_management_system.folder_calendar.func_open_calendar_view;
+import com.example.medical_records_management_system.folder_manage_records.func_open_manage_records_view;
+import com.example.medical_records_management_system.folder_patient.func_open_patient_view;
+import com.example.medical_records_management_system.folder_search.func_open_search_view;
 import com.example.medical_records_management_system.func_current_date;
 import com.example.medical_records_management_system.func_user_profile;
 import com.jfoenix.controls.JFXButton;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
 import javafx.scene.text.TextFlow;
 import javafx.stage.Stage;
+
+import java.io.IOException;
 
 public class controller_main {
 
@@ -48,6 +55,31 @@ public class controller_main {
             Stage stage = (Stage) button_log_out.getScene().getWindow();
             logOut.logOut(stage);
         });
+
+        // Привязываем действие к кнопке календаря
+        button_calendar.setOnAction(event -> {
+            func_open_calendar_view openCalendarView = new func_open_calendar_view();
+            openCalendarView.showCalendar(center_pane);  // Передаем center_pane
+        });
+
+        // Привязываем действие к кнопке search
+        button_search_records.setOnAction(event -> {
+            func_open_search_view openSearchView = new func_open_search_view();
+            openSearchView.showSearch(center_pane);  // Передаем center_pane
+        });
+
+        // Привязываем действие к кнопке manage
+        button_manage_records.setOnAction(event -> {
+            func_open_manage_records_view openManageRecords = new func_open_manage_records_view();
+            openManageRecords.showRecords(center_pane);  // Передаем center_pane
+        });
+
+        // Привязываем действие к кнопке patient
+        button_patient_card.setOnAction(event -> {
+            func_open_patient_view openPatients = new func_open_patient_view();
+            openPatients.showPatients(center_pane);  // Передаем center_pane
+        });
+
     }
 
     // Метод для передачи данных о докторе из login
@@ -56,7 +88,6 @@ public class controller_main {
         // Вызов метода обновления профиля из func_user_profile
         userProfile.updateProfile(doctorData, text_full_name, image_icon, text_speciality);
     }
-
 
 
 }
