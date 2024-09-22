@@ -1,8 +1,6 @@
 package com.example.medical_records_management_system.folder_database;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
+import java.sql.*;
 
 public class database_handler {
 
@@ -32,6 +30,26 @@ public class database_handler {
         return connection;
     }
 
+    // Новый метод для получения URL изображения по doctor_id
+    public String getDoctorImageUrl(int doctorId) {
+        String query = "SELECT image_icon FROM doctors WHERE doctor_id = ?";
+        String imageUrl = null;
 
+        try (Connection connection = getConnection();
+             PreparedStatement preparedStatement = connection.prepareStatement(query)) {
+
+            preparedStatement.setInt(1, doctorId);
+            ResultSet resultSet = preparedStatement.executeQuery();
+
+            if (resultSet.next()) {
+                imageUrl = resultSet.getString("image_icon").trim();
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return imageUrl;
+    }
 }
 

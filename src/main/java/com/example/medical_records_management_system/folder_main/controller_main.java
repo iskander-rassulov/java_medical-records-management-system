@@ -87,6 +87,7 @@ public class controller_main {
         this.doctorData = doctorData;
         // Вызов метода обновления профиля из func_user_profile
         userProfile.updateProfile(doctorData, text_full_name, image_icon, text_speciality);
+
     }
 
 
