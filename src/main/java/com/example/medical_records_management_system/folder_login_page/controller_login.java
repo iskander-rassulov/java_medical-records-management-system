@@ -1,8 +1,11 @@
 package com.example.medical_records_management_system.folder_login_page;
 
 
+import com.example.medical_records_management_system.data_doctor;
+import com.example.medical_records_management_system.folder_logged_in.func_keep_logged_in;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXCheckBox;
+import javafx.application.Platform;
 import javafx.scene.control.Hyperlink;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
@@ -28,23 +31,36 @@ public class controller_login {
     public Text incorrect_data;
     public JFXCheckBox check_box_keep_logged_in;
 
-    public void initialize(){
+    public void initialize() {
         funcLoginImage.setLoginImage(image_hospital);
 
-        // Привязываем действие к кнопке
-        button_sign_in.setOnAction(event -> {
-            boolean loginSuccessful = func_check_login_data.checkLoginData(field_username, field_password);
-
-            if (loginSuccessful) {
-                // Меняем сцену на view_main.fxml
+        // Проверка на сохраненные данные
+        if (func_check_login_data.isLoggedIn()) {
+            // Используем Platform.runLater, чтобы отложить выполнение переключения сцены
+            Platform.runLater(() -> {
                 Stage stage = (Stage) button_sign_in.getScene().getWindow();
                 funcOpenMainView.switchToMainView(stage);
-            } else {
-                // Показываем текст, если данные введены неверно
-                incorrect_data.setVisible(true);
-            }
-        });
+            });
+        } else {
+            // Привязываем действие к кнопке входа только если не было автологина
+            button_sign_in.setOnAction(event -> {
+                boolean loginSuccessful = func_check_login_data.checkLoginData(field_username.getText(), field_password.getText());
 
+                if (loginSuccessful) {
+                    // Если пользователь выбрал "keep me logged in"
+                    if (check_box_keep_logged_in.isSelected()) {
+                        data_doctor doctor = func_check_login_data.getDoctorData(); // Получи объект с данными
+                        func_keep_logged_in.saveUserData(doctor, true);
+                    }
+                    // Переключаем сцену
+                    Stage stage = (Stage) button_sign_in.getScene().getWindow();
+                    funcOpenMainView.switchToMainView(stage);
+                } else {
+                    incorrect_data.setVisible(true);
+                }
+            });
+        }
     }
+
 
 }

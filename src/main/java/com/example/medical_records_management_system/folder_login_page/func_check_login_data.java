@@ -2,6 +2,10 @@ package com.example.medical_records_management_system.folder_login_page;
 
 import com.example.medical_records_management_system.data_doctor;
 import com.example.medical_records_management_system.folder_database.database_handler;
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -14,10 +18,7 @@ public class func_check_login_data {
     private static final data_doctor doctorData = new data_doctor(); // Экземпляр класса для хранения данных
 
     // Получаем доступ к полям через контроллер
-    public static boolean checkLoginData(TextField field_username, PasswordField field_password) {
-        // Считываем введенные данные
-        String username = field_username.getText();
-        String password = field_password.getText();
+    public static boolean checkLoginData(String username, String password) {
 
         // Проверка на пустые поля
         if (username.isEmpty() || password.isEmpty()) {
@@ -73,6 +74,34 @@ public class func_check_login_data {
         }
 
         return userExists;
+    }
+
+    // Метод для проверки сохраненных данных
+    public static boolean isLoggedIn() {
+        try (BufferedReader reader = new BufferedReader(new FileReader("user_data.txt"))) {
+            String line;
+            String username = "";
+            String password = "";
+            boolean keepLoggedIn = false;
+
+            while ((line = reader.readLine()) != null) {
+                if (line.startsWith("username=")) {
+                    username = line.substring("username=".length());
+                } else if (line.startsWith("password=")) {
+                    password = line.substring("password=".length());
+                } else if (line.startsWith("keep_logged_in=")) {
+                    keepLoggedIn = Boolean.parseBoolean(line.substring("keep_logged_in=".length()));
+                }
+            }
+
+            if (keepLoggedIn && checkLoginData(username, password)) {
+                return true;
+            }
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return false;
     }
 
     public static data_doctor getDoctorData() {

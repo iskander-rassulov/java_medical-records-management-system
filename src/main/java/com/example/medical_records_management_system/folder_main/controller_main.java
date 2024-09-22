@@ -48,7 +48,6 @@ public class controller_main {
             Stage stage = (Stage) button_log_out.getScene().getWindow();
             logOut.logOut(stage);
         });
-
     }
 
     // Метод для передачи данных о докторе из login
