@@ -3,6 +3,7 @@ package com.example.medical_records_management_system.folder_login_page;
 
 import com.example.medical_records_management_system.controller_main;
 import com.jfoenix.controls.JFXButton;
+import com.jfoenix.controls.JFXCheckBox;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -18,7 +19,6 @@ import java.io.IOException;
 
 public class controller_login {
 
-
     func_login_image funcLoginImage = new func_login_image();
 
     public AnchorPane pane_left;
@@ -31,6 +31,7 @@ public class controller_login {
     public AnchorPane pane_right;
     public ImageView image_hospital;
     public Text incorrect_data;
+    public JFXCheckBox check_box_keep_logged_in;
 
     public void initialize(){
         funcLoginImage.setLoginImage(image_hospital);

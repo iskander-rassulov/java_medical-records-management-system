@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
 <?import javafx.scene.control.Hyperlink?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
@@ -25,8 +27,11 @@
             <Hyperlink fx:id="button_forgot_password" layoutX="291.0" layoutY="360.0" text="Forgot password" AnchorPane.rightAnchor="170.0" AnchorPane.topAnchor="430.0" />
             <Text layoutX="298.0" layoutY="209.0" strokeType="OUTSIDE" strokeWidth="0.0" text="USERNAME" AnchorPane.leftAnchor="170.0" AnchorPane.topAnchor="240.0" />
             <Text layoutX="308.0" layoutY="219.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PASSWORD" AnchorPane.leftAnchor="170.0" AnchorPane.topAnchor="320.0" />
-            <Hyperlink fx:id="button_sign_up" layoutX="301.0" layoutY="370.0" text="Sign Up" AnchorPane.leftAnchor="170.0" AnchorPane.topAnchor="430.0" />
+            <Hyperlink fx:id="button_sign_up" layoutX="301.0" layoutY="370.0" prefHeight="20.0" text="Sign Up" AnchorPane.leftAnchor="320.0" AnchorPane.topAnchor="493.0" />
             <Text fx:id="incorrect_data" fill="RED" layoutX="170.0" layoutY="478.0" strokeType="OUTSIDE" strokeWidth="0.0" style="visibility: false;" text="Incorrect username or password. Please try again." textAlignment="CENTER" AnchorPane.leftAnchor="173.0" AnchorPane.rightAnchor="170.0" />
+            <Text layoutX="173.0" layoutY="447.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Don't have an account?" AnchorPane.leftAnchor="170.0" AnchorPane.topAnchor="500.0" />
+            <Line endX="120.0" layoutX="271.0" layoutY="473.0" startX="-100.0" stroke="#d9d9d9" AnchorPane.leftAnchor="170.0" AnchorPane.topAnchor="480.0" />
+            <JFXCheckBox fx:id="check_box_keep_logged_in" checkedColor="#0077b6" layoutX="167.0" layoutY="433.0" text="Keep logged in" AnchorPane.leftAnchor="170.0" AnchorPane.topAnchor="435.0" />
          </children>
       </AnchorPane>
    </left>
