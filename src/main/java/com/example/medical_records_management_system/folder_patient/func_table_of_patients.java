@@ -31,6 +31,11 @@ public class func_table_of_patients {
         column_record_id.setResizable(false);
         column_f_name.setResizable(false);
         column_s_name.setResizable(false);
+
+        column_patient_id.setEditable(false);
+        column_record_id.setEditable(false);
+        column_f_name.setEditable(false);
+        column_s_name.setEditable(false);
         // Загрузка данных для конкретного доктора
         return displayPatientsForDoctor(table_view_patient);
     }

@@ -33,6 +33,12 @@ public class func_table_of_records {
         column_diagnosis.setResizable(false);
         column_treatment.setResizable(false);
 
+        column_date.setEditable(false);
+        column_record.setEditable(false);
+        column_patient.setEditable(false);
+        column_diagnosis.setEditable(false);
+        column_treatment.setEditable(false);
+
         // Загрузка данных для конкретного доктора
         return displayRecordsForDoctor(table_view_search);
     }
