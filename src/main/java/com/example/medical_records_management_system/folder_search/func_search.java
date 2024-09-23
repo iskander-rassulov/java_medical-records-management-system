@@ -15,11 +15,9 @@ import java.util.List;
 public class func_search {
     public JFXButton button_click_search;
     public TextField search_bar;
-    private final database_handler dbHandler = new database_handler();
-    private final data_doctor dataDoctor = new data_doctor();
 
-    @FXML
-    public ChoiceBox<String> choice_box;
+    private final func_table_of_records tableOfRecords = new func_table_of_records();
+
     @FXML
     private TableView<data_medical_records> table_view_search;
     @FXML
@@ -35,50 +33,9 @@ public class func_search {
 
 
     public void initialize() {
-        // Создаем список вариантов
-        ObservableList<String> sortOptions = FXCollections.observableArrayList("by date↑", "by date↓", "by patient");
-
-        // Настройка колонок таблицы
-        column_date.setCellValueFactory(new PropertyValueFactory<>("visitDate"));
-        column_record.setCellValueFactory(new PropertyValueFactory<>("medicalRecordId"));
-        column_patient.setCellValueFactory(new PropertyValueFactory<>("patientId"));
-        column_diagnosis.setCellValueFactory(new PropertyValueFactory<>("diagnosis"));
-        column_treatment.setCellValueFactory(new PropertyValueFactory<>("treatmentPlan"));
-
-        column_date.setResizable(false);
-        column_record.setResizable(false);
-        column_patient.setResizable(false);
-        column_diagnosis.setResizable(false);
-        column_treatment.setResizable(false);
-
-        // Загрузка данных для конкретного доктора
-        displayRecordsForDoctor();
-
-        // Добавляем возможность клика на строки
-        table_view_search.setRowFactory(tv -> {
-            TableRow<data_medical_records> row = new TableRow<>();
-            row.setOnMouseClicked(event -> {
-                if (!row.isEmpty()) {
-                    data_medical_records selectedRecord = row.getItem();
-                    System.out.println("Selected record: " + selectedRecord);
-                    // Добавь логику для обработки выбранной записи
-                }
-            });
-            return row;
-        });
+        // Инициализация таблицы через новый класс
+        tableOfRecords.initializeTable(table_view_search, column_date, column_record, column_patient, column_diagnosis, column_treatment);
     }
 
-    public void displayRecordsForDoctor() {
-        // Получаем doctor_id из data_doctor
-        int doctorId = data_doctor.getDoctorId();
 
-        // Получаем список записей для данного врача
-        List<data_medical_records> records = dbHandler.getRecordsByDoctorId(doctorId);
-
-        // Создаем ObservableList для таблицы
-        ObservableList<data_medical_records> recordObservableList = FXCollections.observableArrayList(records);
-
-        // Устанавливаем данные в TableView
-        table_view_search.setItems(recordObservableList);
-    }
 }
