@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import com.jfoenix.controls.JFXButton?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
@@ -9,9 +8,8 @@
 <?import javafx.scene.text.Text?>
 
 <AnchorPane prefHeight="680.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.medical_records_management_system.folder_search.func_search">
-   <TextField fx:id="search_bar" layoutX="174.0" layoutY="110.0" prefWidth="200.0" AnchorPane.leftAnchor="180.0" AnchorPane.topAnchor="110.0" />
-   <JFXButton fx:id="button_click_search" layoutX="459.0" layoutY="110.0" style="-fx-background-color: #0077b6;" text="Search" textFill="WHITE" AnchorPane.rightAnchor="160.0" AnchorPane.topAnchor="110.0" />
-   <Text layoutX="239.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Search Records" AnchorPane.topAnchor="40.0">
+   <TextField fx:id="search_bar" layoutX="150.0" layoutY="109.0" prefWidth="300.0" AnchorPane.leftAnchor="150.0" AnchorPane.rightAnchor="150.0" AnchorPane.topAnchor="100.0" />
+   <Text layoutX="239.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Search Records" AnchorPane.leftAnchor="238.0" AnchorPane.rightAnchor="240.0" AnchorPane.topAnchor="40.0">
       <font>
          <Font size="18.0" />
       </font>

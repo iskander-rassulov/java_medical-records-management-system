@@ -7,16 +7,18 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
-
 import java.util.List;
 
 public class func_table_of_records {
 
     private final database_handler dbHandler = new database_handler();
 
-    public void initializeTable(TableView<data_medical_records> table_view_search, TableColumn<data_medical_records, String> column_date, TableColumn<data_medical_records, Integer> column_record,
-                                TableColumn<data_medical_records, String> column_patient, TableColumn<data_medical_records, String> column_diagnosis,
-                                TableColumn<data_medical_records, String> column_treatment) {
+    public ObservableList<data_medical_records> initializeTable(TableView<data_medical_records> table_view_search,
+                                                                TableColumn<data_medical_records, String> column_date,
+                                                                TableColumn<data_medical_records, Integer> column_record,
+                                                                TableColumn<data_medical_records, String> column_patient,
+                                                                TableColumn<data_medical_records, String> column_diagnosis,
+                                                                TableColumn<data_medical_records, String> column_treatment) {
 
         // Настройка колонок таблицы
         column_date.setCellValueFactory(new PropertyValueFactory<>("visitDate"));
@@ -32,23 +34,10 @@ public class func_table_of_records {
         column_treatment.setResizable(false);
 
         // Загрузка данных для конкретного доктора
-        displayRecordsForDoctor(table_view_search);
-
-        // Добавляем возможность клика на строки
-        table_view_search.setRowFactory(tv -> {
-            TableRow<data_medical_records> row = new TableRow<>();
-            row.setOnMouseClicked(event -> {
-                if (!row.isEmpty()) {
-                    data_medical_records selectedRecord = row.getItem();
-                    System.out.println("Selected record: " + selectedRecord);
-                    // Добавь логику для обработки выбранной записи
-                }
-            });
-            return row;
-        });
+        return displayRecordsForDoctor(table_view_search);
     }
 
-    public void displayRecordsForDoctor(TableView<data_medical_records> table_view_search) {
+    public ObservableList<data_medical_records> displayRecordsForDoctor(TableView<data_medical_records> table_view_search) {
         // Получаем doctor_id из data_doctor
         int doctorId = data_doctor.getDoctorId();
 
@@ -60,6 +49,9 @@ public class func_table_of_records {
 
         // Устанавливаем данные в TableView
         table_view_search.setItems(recordObservableList);
+
+        return recordObservableList;
     }
 }
+
 
