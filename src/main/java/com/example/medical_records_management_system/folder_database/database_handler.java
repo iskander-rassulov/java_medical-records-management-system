@@ -1,6 +1,7 @@
 package com.example.medical_records_management_system.folder_database;
 
 import com.example.medical_records_management_system.data_medical_records;
+import com.example.medical_records_management_system.data_patients;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -84,6 +85,44 @@ public class database_handler {
 
         return records;
     }
+
+    // Метод для получения записей по doctor_id
+    public List<data_patients> getPatientsByDoctorId(int doctorId) {
+        List<data_patients> patientsList = new ArrayList<>();
+
+        String query = "SELECT p.patient_id, p.first_name, p.last_name, p.date_of_birth, p.gender, p.phone_number, p.email, p.address, p.medical_record_id " +
+                "FROM patients p " +
+                "JOIN medical_records mr ON p.patient_id = mr.patient_id " +
+                "WHERE mr.doctor_id = ?";
+
+
+        try (Connection connection = getConnection();
+             PreparedStatement preparedStatement = connection.prepareStatement(query)) {
+
+            preparedStatement.setInt(1, doctorId);
+            ResultSet resultSet = preparedStatement.executeQuery();
+
+            while (resultSet.next()) {
+                data_patients patient = new data_patients();
+                patient.setPatientId(resultSet.getInt("patient_id"));
+                patient.setFirstName(resultSet.getString("first_name").trim());
+                patient.setSecondName(resultSet.getString("last_name").trim());
+                patient.setDateOfBirth(resultSet.getString("date_of_birth").trim());
+                patient.setGender(resultSet.getString("gender").trim());
+                patient.setPhoneNumber(resultSet.getString("phone_number").trim());
+                patient.setEmail(resultSet.getString("email").trim());
+                patient.setAddress(resultSet.getString("address").trim());
+                patient.setMedicalRecordId(resultSet.getInt("medical_record_id"));
+                patientsList.add(patient);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return patientsList;
+    }
+
+
 
 }
 

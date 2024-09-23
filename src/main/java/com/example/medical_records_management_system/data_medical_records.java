@@ -1,9 +1,7 @@
 package com.example.medical_records_management_system;
 
-import java.sql.Date;
 
 public class data_medical_records {
-
 
     private int medicalRecordId;
     private int patientId;
