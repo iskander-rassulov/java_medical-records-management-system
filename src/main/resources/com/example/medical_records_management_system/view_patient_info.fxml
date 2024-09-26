@@ -1,14 +1,118 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.TextFlow?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.example.medical_records_management_system.folder_patient.func_patient_info"
-            prefHeight="400.0" prefWidth="600.0">
 
+<AnchorPane prefHeight="680.0" prefWidth="380.0" style="-fx-background-color: #457b9d;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.medical_records_management_system.folder_patient.func_patient_info">
+   <children>
+      <Text fill="WHITE" layoutX="113.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Patient Information" textAlignment="CENTER" AnchorPane.leftAnchor="113.0" AnchorPane.rightAnchor="113.0" AnchorPane.topAnchor="40.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <TextFlow layoutX="90.0" layoutY="97.0" prefHeight="30.0" prefWidth="200.0" textAlignment="CENTER" AnchorPane.leftAnchor="90.0" AnchorPane.rightAnchor="90.0" AnchorPane.topAnchor="150.0">
+         <children>
+            <Text fx:id="valName" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Name">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <Text fx:id="valSurname" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Surname">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+         </children>
+      </TextFlow>
+      <TextFlow layoutX="90.0" layoutY="142.0" prefHeight="30.0" prefWidth="200.0" textAlignment="CENTER" AnchorPane.topAnchor="180.0">
+         <children>
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Date of birth: ">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Text>
+            <Text fx:id="valDateOfBirth" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="valueDateOfBirth">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+         </children>
+      </TextFlow>
+      <TextFlow layoutX="100.0" layoutY="152.0" prefHeight="30.0" prefWidth="200.0" textAlignment="CENTER" AnchorPane.leftAnchor="90.0" AnchorPane.topAnchor="210.0">
+         <children>
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Gender: ">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Text>
+            <Text fx:id="valGender" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="valueGender">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+         </children>
+      </TextFlow>
+      <TextFlow layoutX="45.0" layoutY="190.0" prefHeight="30.0" prefWidth="300.0" textAlignment="CENTER" AnchorPane.leftAnchor="45.0" AnchorPane.topAnchor="240.0">
+         <children>
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Phone number: ">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Text>
+            <Text fx:id="valPhoneNumber" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="valuePhoneNumber">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+         </children>
+      </TextFlow>
+      <TextFlow layoutX="120.0" layoutY="172.0" prefHeight="30.0" prefWidth="300.0" textAlignment="CENTER" AnchorPane.leftAnchor="45.0" AnchorPane.topAnchor="270.0">
+         <children>
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="E-mail: ">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Text>
+            <Text fx:id="valEmail" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="valueEmail">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+         </children>
+      </TextFlow>
+      <TextFlow layoutX="130.0" layoutY="182.0" prefHeight="30.0" prefWidth="300.0" textAlignment="CENTER" AnchorPane.leftAnchor="45.0" AnchorPane.topAnchor="300.0">
+         <children>
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Address: ">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Text>
+            <Text fx:id="valAddress" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="valueAddress">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+         </children>
+      </TextFlow>
+      <TextFlow layoutX="140.0" layoutY="192.0" prefHeight="30.0" prefWidth="300.0" textAlignment="CENTER" AnchorPane.leftAnchor="45.0" AnchorPane.topAnchor="330.0">
+         <children>
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Medical record ID: ">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Text>
+            <Text fx:id="valRecordId" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="valueRecordId">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+         </children>
+      </TextFlow>
+      <JFXButton fx:id="button_patient_manage_patient_info" layoutX="40.0" layoutY="380.0" prefHeight="25.0" prefWidth="300.0" text="🔨 Manage patient info" textFill="WHITE" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="400.0" />
+      <JFXButton fx:id="button_patient_open_medical_record" layoutX="50.0" layoutY="390.0" prefHeight="25.0" prefWidth="300.0" text="🔍 Open medical record" textFill="WHITE" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="440.0" />
+   </children>
 </AnchorPane>

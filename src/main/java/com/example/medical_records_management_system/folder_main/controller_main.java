@@ -1,40 +1,47 @@
 package com.example.medical_records_management_system.folder_main;
 
+import com.example.medical_records_management_system.AppContext;
 import com.example.medical_records_management_system.data_doctor;
 import com.example.medical_records_management_system.folder_calendar.func_open_calendar_view;
-import com.example.medical_records_management_system.folder_manage_records.func_open_manage_records_view;
+import com.example.medical_records_management_system.folder_management.func_open_manage_view;
 import com.example.medical_records_management_system.folder_patient.func_open_patient_view;
+import com.example.medical_records_management_system.folder_patient.func_patient;
 import com.example.medical_records_management_system.folder_search.func_open_search_view;
 import com.example.medical_records_management_system.func_current_date;
 import com.example.medical_records_management_system.func_user_profile;
 import com.jfoenix.controls.JFXButton;
-import javafx.fxml.FXMLLoader;
+import javafx.fxml.FXML;
+import javafx.scene.Parent;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
 import javafx.scene.text.TextFlow;
 import javafx.stage.Stage;
 
-import java.io.IOException;
-
 public class controller_main {
+
 
     func_current_date funcCurrentDate = new func_current_date();
     private data_doctor doctorData;
     private final func_user_profile userProfile = new func_user_profile();
 
     //Panes
+    @FXML
     public AnchorPane bottom_pane;
+    @FXML
     public AnchorPane center_pane;
+    @FXML
     public AnchorPane left_pane;
+    @FXML
     public AnchorPane right_pane;
 
     //Buttons
     public JFXButton button_search_records;
     public JFXButton button_patient_card;
     public JFXButton button_calendar;
-    public JFXButton button_manage_records;
     public JFXButton button_log_out;
+    public JFXButton button_setting;
+    public JFXButton button_manage;
 
     //Time
     public Text text_current_date;
@@ -47,6 +54,17 @@ public class controller_main {
 
 
     public void initialize(){
+
+        // Устанавливаем controller_main и right_pane в com.example.medical_records_management_system.AppContext
+        AppContext.getInstance().setMainController(this);
+        AppContext.getInstance().setRightPane(right_pane);
+
+
+        System.out.println("right_pane: " + right_pane);  // Добавьте это для проверки
+        if (right_pane == null) {
+            System.out.println("right_pane is not initialized");
+        }
+
         //Инициализация даты
         funcCurrentDate.setText_current_date(text_current_date);
 
@@ -69,15 +87,15 @@ public class controller_main {
         });
 
         // Привязываем действие к кнопке manage
-        button_manage_records.setOnAction(event -> {
-            func_open_manage_records_view openManageRecords = new func_open_manage_records_view();
+        button_manage.setOnAction(event -> {
+            func_open_manage_view openManageRecords = new func_open_manage_view();
             openManageRecords.showRecords(center_pane);  // Передаем center_pane
         });
 
         // Привязываем действие к кнопке patient
         button_patient_card.setOnAction(event -> {
             func_open_patient_view openPatients = new func_open_patient_view();
-            openPatients.showPatients(center_pane);  // Передаем center_pane
+            openPatients.showPatients(center_pane); // Передаем center_pane
         });
 
     }
