@@ -31,8 +31,6 @@
             <JFXButton fx:id="button_patient_card" alignment="CENTER_LEFT" layoutX="25.0" layoutY="291.0" minWidth="250.0" prefHeight="30.0" prefWidth="250.0" style="-fx-background-color: transparent; -fx-background-radius: 30; -fx-border-radius: 30; -fx-text-alignment: left;" text="👨 Patient card" textFill="WHITE" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="26.0" AnchorPane.topAnchor="310.0" />
 
             <JFXButton fx:id="button_calendar" alignment="CENTER_LEFT" layoutX="35.0" layoutY="296.0" minWidth="250.0" prefHeight="30.0" prefWidth="250.0" style="-fx-background-color: transparent; -fx-background-radius: 30; -fx-border-radius: 30; -fx-text-alignment: left;" text="📅  Calendar" textFill="WHITE" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="26.0" AnchorPane.topAnchor="350.0" />
-
-            <JFXButton fx:id="button_manage_records" alignment="CENTER_LEFT" layoutX="45.0" layoutY="306.0" minWidth="250.0" prefHeight="30.0" prefWidth="250.0" style="-fx-background-color: transparent; -fx-background-radius: 30; -fx-border-radius: 30; -fx-text-alignment: LEFT;" text="🖊 Manage records" textFill="WHITE" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="26.0" AnchorPane.topAnchor="390.0" />
             <TextFlow fx:id="text_flow_full_name" layoutX="9.0" layoutY="200.0" prefHeight="30.0" prefWidth="300.0" textAlignment="CENTER" AnchorPane.leftAnchor="9.0" AnchorPane.rightAnchor="9.0" AnchorPane.topAnchor="200.0">
                <children>
                   <Text fx:id="text_full_name" fill="WHITE" strokeMiterLimit="0.0" strokeType="OUTSIDE" strokeWidth="0.0" text="NameSurname" textAlignment="CENTER">
