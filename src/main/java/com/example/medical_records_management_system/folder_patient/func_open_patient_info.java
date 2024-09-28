@@ -15,7 +15,7 @@ public class func_open_patient_info {
 
             // Получаем контроллер
             func_patient_info patientInfoController = loader.getController();
-
+            patientInfoController.initialize(patient, right_pane);
             // Передаем данные пациента
             patientInfoController.setPatientInfo(patient);
 

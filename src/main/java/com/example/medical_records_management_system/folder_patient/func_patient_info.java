@@ -1,9 +1,13 @@
 package com.example.medical_records_management_system.folder_patient;
 
 import com.example.medical_records_management_system.data_doctor;
+import com.example.medical_records_management_system.data_medical_records;
 import com.example.medical_records_management_system.data_patients;
+import com.example.medical_records_management_system.folder_database.database_handler;
+import com.example.medical_records_management_system.folder_search.func_open_record_info;
 import com.jfoenix.controls.JFXButton;
 import javafx.fxml.FXML;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
 
 public class func_patient_info {
@@ -26,7 +30,25 @@ public class func_patient_info {
     @FXML
     public JFXButton button_patient_manage_patient_info;
     @FXML
-    public JFXButton button_patient_open_medical_record;
+    public JFXButton button_open_medical_record;
+
+    database_handler databaseHandler = new database_handler();
+
+
+    public void initialize(data_patients patient, AnchorPane rightPane){
+
+        button_open_medical_record.setOnMouseClicked(event -> {
+                    // Двойной щелчок
+                    data_medical_records selectedRecord = databaseHandler.getMedicalRecordByPatientId(patient.getPatientId());
+                    if (selectedRecord != null) {
+                        System.out.println("Запись выбрана: " + selectedRecord.getMedicalRecordId());  // Проверка
+                        func_open_record_info recordInfo = new func_open_record_info();
+                        assert rightPane != null;
+                        recordInfo.showRecordInfo(rightPane, selectedRecord);  // Передаем right_pane
+                    }
+                }
+        );
+    }
 
     // Метод для установки данных о докторе
     public void setPatientInfo(data_patients patient) {

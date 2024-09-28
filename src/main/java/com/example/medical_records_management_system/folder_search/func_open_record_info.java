@@ -17,7 +17,7 @@ public class func_open_record_info {
 
             // Получаем контроллер
             func_record_info recordInfo = loader.getController();
-
+            recordInfo.initialize(dataMedicalRecords, right_pane);
             // Передаем данные пациента
             recordInfo.setRecordInfo(dataMedicalRecords);
 

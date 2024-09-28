@@ -112,6 +112,6 @@
          </children>
       </TextFlow>
       <JFXButton fx:id="button_patient_manage_patient_info" layoutX="40.0" layoutY="380.0" prefHeight="25.0" prefWidth="300.0" style="-fx-font-size: 14;" text="🔨 Manage patient info" textFill="WHITE" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="400.0" />
-      <JFXButton fx:id="button_patient_open_medical_record" layoutX="50.0" layoutY="390.0" prefHeight="25.0" prefWidth="300.0" style="-fx-font-size: 14;" text="🔍 Open medical record" textFill="WHITE" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="440.0" />
+      <JFXButton fx:id="button_open_medical_record" layoutX="50.0" layoutY="390.0" prefHeight="25.0" prefWidth="300.0" style="-fx-font-size: 14;" text="🔍 Open medical record" textFill="WHITE" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="440.0" />
    </children>
 </AnchorPane>

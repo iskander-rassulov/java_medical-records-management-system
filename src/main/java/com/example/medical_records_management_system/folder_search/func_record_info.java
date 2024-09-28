@@ -5,8 +5,13 @@ import com.example.medical_records_management_system.data_medical_records;
 import com.example.medical_records_management_system.data_patients;
 import com.example.medical_records_management_system.folder_database.database_handler;
 import com.example.medical_records_management_system.folder_login_page.func_check_login_data;
+import com.example.medical_records_management_system.folder_main.func_log_out;
+import com.example.medical_records_management_system.folder_patient.func_open_patient_info;
+import com.jfoenix.controls.JFXButton;
 import javafx.fxml.FXML;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
+import javafx.stage.Stage;
 
 public class func_record_info {
     @FXML
@@ -26,7 +31,27 @@ public class func_record_info {
     @FXML
     public Text valTreatmentPlan;
 
+    @FXML
+    public JFXButton buttonOpenPatientCard;
+
     database_handler databaseHandler = new database_handler();
+
+
+    public void initialize(data_medical_records dataMedicalRecords, AnchorPane rightPane){
+
+        buttonOpenPatientCard.setOnMouseClicked(event -> {
+              // Двойной щелчок
+                data_patients selectedPatient = databaseHandler.getPatientById(dataMedicalRecords.getPatientId());
+                if (selectedPatient != null) {
+                    System.out.println("Пациент выбран: " + selectedPatient.getFirstName());  // Проверка
+                    func_open_patient_info patientInfoOpener = new func_open_patient_info();
+                    assert rightPane != null;
+                    patientInfoOpener.showPatientInfo(rightPane, selectedPatient);  // Передаем right_pane
+                }
+            }
+        );
+
+    }
 
     public void setRecordInfo(data_medical_records dataMedicalRecords){
         valRecordId.setText(String.valueOf(dataMedicalRecords.getMedicalRecordId()));

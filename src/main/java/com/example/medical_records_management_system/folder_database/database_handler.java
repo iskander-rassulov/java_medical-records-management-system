@@ -155,6 +155,35 @@ public class database_handler {
         return patient;
     }
 
+    public data_medical_records getMedicalRecordByPatientId(int patientId) {
+        data_medical_records medicalRecord = null;
+        String query = "SELECT * FROM medical_records WHERE patient_id = ?";
+
+        try (Connection connection = getConnection();
+             PreparedStatement preparedStatement = connection.prepareStatement(query)) {
+
+            preparedStatement.setInt(1, patientId);
+            ResultSet resultSet = preparedStatement.executeQuery();
+
+            if (resultSet.next()) {
+                medicalRecord = new data_medical_records();
+                medicalRecord.setMedicalRecordId(resultSet.getInt("medical_record_id"));
+                medicalRecord.setPatientId(resultSet.getInt("patient_id"));
+                medicalRecord.setDoctorId(resultSet.getInt("doctor_id"));
+                medicalRecord.setVisitDate(resultSet.getString("visit_date").trim());
+                medicalRecord.setDiagnosis(resultSet.getString("diagnosis").trim());
+                medicalRecord.setTreatmentPlan(resultSet.getString("treatment_plan").trim());
+
+                System.out.println("Запись номер " + resultSet.getInt("medical_record_id"));
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return medicalRecord;
+    }
+
 
 }
 
