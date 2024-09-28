@@ -62,7 +62,7 @@ public class func_check_login_data {
                 // Пользователь найден, сохраняем данные в doctorData
                 userExists = true;
                 doctorData.setDoctorId(resultSet.getInt("doctor_id"));
-                    doctorData.setFirstName(resultSet.getString("first_name"));
+                doctorData.setFirstName(resultSet.getString("first_name"));
                 doctorData.setLastName(resultSet.getString("last_name"));
                 doctorData.setUsername(resultSet.getString("username"));
                 doctorData.setPassword(resultSet.getString("password"));

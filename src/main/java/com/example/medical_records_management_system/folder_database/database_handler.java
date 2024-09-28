@@ -1,11 +1,14 @@
 package com.example.medical_records_management_system.folder_database;
 
+import com.example.medical_records_management_system.data_doctor;
 import com.example.medical_records_management_system.data_medical_records;
 import com.example.medical_records_management_system.data_patients;
 
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
+
+import static org.postgresql.jdbc.EscapedFunctions.USER;
 
 public class database_handler {
 
@@ -122,6 +125,35 @@ public class database_handler {
         return patientsList;
     }
 
+    public data_patients getPatientById(int patientId) {
+        data_patients patient = null;
+        String query = "SELECT * FROM patients WHERE patient_id = ?";
+
+        try (Connection connection = getConnection();
+             PreparedStatement preparedStatement = connection.prepareStatement(query)) {
+
+            preparedStatement.setInt(1, patientId);
+            ResultSet resultSet = preparedStatement.executeQuery();
+
+            if (resultSet.next()) {
+                patient = new data_patients();
+                patient.setPatientId(resultSet.getInt("patient_id"));
+                patient.setFirstName(resultSet.getString("first_name").trim());
+                patient.setSecondName(resultSet.getString("last_name").trim());
+                patient.setDateOfBirth(resultSet.getString("date_of_birth").trim());
+                patient.setGender(resultSet.getString("gender").trim());
+                patient.setPhoneNumber(resultSet.getString("phone_number").trim());
+                patient.setEmail(resultSet.getString("email").trim());
+                patient.setAddress(resultSet.getString("address").trim());
+                patient.setMedicalRecordId(resultSet.getInt("medical_record_id"));
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return patient;
+    }
 
 
 }

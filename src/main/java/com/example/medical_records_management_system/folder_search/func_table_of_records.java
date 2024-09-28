@@ -2,11 +2,15 @@ package com.example.medical_records_management_system.folder_search;
 
 import com.example.medical_records_management_system.data_doctor;
 import com.example.medical_records_management_system.data_medical_records;
+import com.example.medical_records_management_system.data_patients;
 import com.example.medical_records_management_system.folder_database.database_handler;
+import com.example.medical_records_management_system.folder_patient.func_open_patient_info;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.layout.AnchorPane;
+
 import java.util.List;
 
 public class func_table_of_records {
@@ -18,7 +22,8 @@ public class func_table_of_records {
                                                                 TableColumn<data_medical_records, Integer> column_record,
                                                                 TableColumn<data_medical_records, String> column_patient,
                                                                 TableColumn<data_medical_records, String> column_diagnosis,
-                                                                TableColumn<data_medical_records, String> column_treatment) {
+                                                                TableColumn<data_medical_records, String> column_treatment,
+                                                                AnchorPane rightPane) {
 
         // Настройка колонок таблицы
         column_date.setCellValueFactory(new PropertyValueFactory<>("visitDate"));
@@ -38,6 +43,23 @@ public class func_table_of_records {
         column_patient.setEditable(false);
         column_diagnosis.setEditable(false);
         column_treatment.setEditable(false);
+
+        // Проверяем, что right_pane не равен null
+        if (rightPane == null) {
+            System.out.println("Error: right_pane is null.");
+        }
+
+        table_view_search.setOnMouseClicked(event -> {
+            if (event.getClickCount() == 2) {  // Двойной щелчок
+                data_medical_records selectedRecord = table_view_search.getSelectionModel().getSelectedItem();
+                if (selectedRecord != null) {
+                    System.out.println("Запись выбрана: " + selectedRecord.getMedicalRecordId());  // Проверка
+                    func_open_record_info recordInfo = new func_open_record_info();
+                    assert rightPane != null;
+                    recordInfo.showRecordInfo(rightPane, selectedRecord);  // Передаем right_pane
+                }
+            }
+        });
 
         // Загрузка данных для конкретного доктора
         return displayRecordsForDoctor(table_view_search);

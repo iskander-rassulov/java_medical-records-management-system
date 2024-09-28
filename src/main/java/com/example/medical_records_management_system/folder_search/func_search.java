@@ -1,5 +1,6 @@
 package com.example.medical_records_management_system.folder_search;
 
+import com.example.medical_records_management_system.AppContext;
 import com.example.medical_records_management_system.data_medical_records;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -28,7 +29,7 @@ public class func_search {
     public void initialize() {
         // Инициализация таблицы через новый класс
         // Хранение всех данных
-        ObservableList<data_medical_records> records = tableOfRecords.initializeTable(table_view_search, column_date, column_record, column_patient, column_diagnosis, column_treatment);
+        ObservableList<data_medical_records> records = tableOfRecords.initializeTable(table_view_search, column_date, column_record, column_patient, column_diagnosis, column_treatment, AppContext.getInstance().getRightPane());
 
         // Подключаем поисковую строку с инициализированным списком записей
         searchBarHandler.setupSearchBar(search_bar, table_view_search, records);
