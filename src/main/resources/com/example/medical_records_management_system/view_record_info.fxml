@@ -6,7 +6,7 @@
 <?import javafx.scene.text.Text?>
 <?import javafx.scene.text.TextFlow?>
 
-<AnchorPane maxWidth="380.0" prefHeight="680.0" prefWidth="380.0" style="-fx-background-color: #457b9d;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.medical_records_management_system.folder_search.func_record_info">
+<AnchorPane maxWidth="380.0" prefHeight="680.0" prefWidth="380.0" style="-fx-background-color: #184e77;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.medical_records_management_system.folder_search.func_record_info">
    <children>
       <Text fill="WHITE" layoutX="79.0" layoutY="121.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Medical Record Information" AnchorPane.leftAnchor="80.0" AnchorPane.topAnchor="100.0">
          <font>
@@ -86,6 +86,6 @@
          </children>
       </TextFlow>
       <JFXButton layoutX="40.0" layoutY="616.0" prefHeight="25.0" prefWidth="300.0" style="-fx-font-size: 14;" text="🔨 Manage Record Information" textFill="WHITE" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="500.0" />
-      <JFXButton fx:id="buttonOpenPatientCard" layoutX="50.0" layoutY="626.0" prefHeight="25.0" prefWidth="300.0" style="-fx-font-size: 14;" text="🔍 Opent Patient Card" textFill="WHITE" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="550.0" />
+      <JFXButton fx:id="buttonOpenPatientCard" layoutX="50.0" layoutY="626.0" prefHeight="25.0" prefWidth="300.0" style="-fx-font-size: 14;" text="🔍 Open Patient Card" textFill="WHITE" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="550.0" />
    </children>
 </AnchorPane>

@@ -6,7 +6,7 @@
 <?import javafx.scene.text.Text?>
 <?import javafx.scene.text.TextFlow?>
 
-<AnchorPane prefHeight="680.0" prefWidth="380.0" style="-fx-background-color: #457b9d;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.medical_records_management_system.folder_patient.func_patient_info">
+<AnchorPane prefHeight="680.0" prefWidth="380.0" style="-fx-background-color: #184e77;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.medical_records_management_system.folder_patient.func_patient_info">
    <children>
       <Text fill="WHITE" layoutX="113.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Patient Information" textAlignment="CENTER" AnchorPane.leftAnchor="113.0" AnchorPane.rightAnchor="113.0" AnchorPane.topAnchor="100.0">
          <font>

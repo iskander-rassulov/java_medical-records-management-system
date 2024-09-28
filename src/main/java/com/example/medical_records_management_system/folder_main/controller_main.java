@@ -3,9 +3,8 @@ package com.example.medical_records_management_system.folder_main;
 import com.example.medical_records_management_system.AppContext;
 import com.example.medical_records_management_system.data_doctor;
 import com.example.medical_records_management_system.folder_calendar.func_open_calendar_view;
-import com.example.medical_records_management_system.folder_management.func_open_manage_view;
+import com.example.medical_records_management_system.folder_make_record.func_open_view_make_record;
 import com.example.medical_records_management_system.folder_patient.func_open_patient_view;
-import com.example.medical_records_management_system.folder_patient.func_patient;
 import com.example.medical_records_management_system.folder_search.func_open_search_view;
 import com.example.medical_records_management_system.func_current_date;
 import com.example.medical_records_management_system.func_user_profile;
@@ -19,6 +18,7 @@ import javafx.scene.text.TextFlow;
 import javafx.stage.Stage;
 
 public class controller_main {
+
 
 
     func_current_date funcCurrentDate = new func_current_date();
@@ -41,7 +41,8 @@ public class controller_main {
     public JFXButton button_calendar;
     public JFXButton button_log_out;
     public JFXButton button_setting;
-    public JFXButton button_manage;
+    public JFXButton button_make_record;
+
 
     //Time
     public Text text_current_date;
@@ -86,16 +87,15 @@ public class controller_main {
             openSearchView.showSearch(center_pane);  // Передаем center_pane
         });
 
-        // Привязываем действие к кнопке manage
-        button_manage.setOnAction(event -> {
-            func_open_manage_view openManageRecords = new func_open_manage_view();
-            openManageRecords.showRecords(center_pane);  // Передаем center_pane
-        });
-
         // Привязываем действие к кнопке patient
         button_patient_card.setOnAction(event -> {
             func_open_patient_view openPatients = new func_open_patient_view();
             openPatients.showPatients(center_pane); // Передаем center_pane
+        });
+
+        button_make_record.setOnAction(event ->{
+            func_open_view_make_record openMake = new func_open_view_make_record();
+            openMake.showMakeRecord(center_pane);
         });
 
     }

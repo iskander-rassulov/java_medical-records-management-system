@@ -46,12 +46,12 @@
                </children>
             </TextFlow>
             <JFXButton fx:id="button_setting" alignment="CENTER_LEFT" layoutX="55.0" layoutY="316.0" minWidth="250.0" prefHeight="30.0" prefWidth="250.0" style="-fx-background-color: transparent; -fx-background-radius: 30; -fx-border-radius: 30; -fx-text-alignment: LEFT;" text="⚙ Settings" textFill="WHITE" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="26.0" AnchorPane.topAnchor="490.0" />
-            <JFXButton fx:id="button_manage" alignment="CENTER_LEFT" layoutX="45.0" layoutY="306.0" minWidth="250.0" prefHeight="30.0" prefWidth="250.0" style="-fx-background-color: transparent; -fx-background-radius: 30; -fx-border-radius: 30; -fx-text-alignment: left;" text="🔨  Manage" textFill="WHITE" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="26.0" AnchorPane.topAnchor="390.0" />
+            <JFXButton fx:id="button_make_record" alignment="CENTER_LEFT" layoutX="45.0" layoutY="306.0" minWidth="250.0" prefHeight="30.0" prefWidth="250.0" style="-fx-background-color: transparent; -fx-background-radius: 30; -fx-border-radius: 30; -fx-text-alignment: left;" text="➕ Make a record" textFill="WHITE" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="26.0" AnchorPane.topAnchor="390.0" />
 
          </children></AnchorPane>
    </left>
 
    <right>
-      <AnchorPane fx:id="right_pane" prefHeight="680.0" prefWidth="380.0" style="-fx-background-color: #457b9d;" BorderPane.alignment="CENTER" />
+      <AnchorPane fx:id="right_pane" prefHeight="680.0" prefWidth="380.0" style="-fx-background-color: #184e77;" BorderPane.alignment="CENTER" />
    </right>
 </BorderPane>
