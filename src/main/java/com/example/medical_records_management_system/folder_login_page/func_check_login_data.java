@@ -1,6 +1,6 @@
 package com.example.medical_records_management_system.folder_login_page;
 
-import com.example.medical_records_management_system.data_doctor;
+import com.example.medical_records_management_system.folder_data.data_doctor;
 import com.example.medical_records_management_system.folder_database.database_handler;
 
 import java.io.BufferedReader;
@@ -10,8 +10,6 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import javafx.scene.control.TextField;
-import javafx.scene.control.PasswordField;
 
 public class func_check_login_data {
 

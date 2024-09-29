@@ -1,7 +1,7 @@
 package com.example.medical_records_management_system.folder_login_page;
 
 
-import com.example.medical_records_management_system.data_doctor;
+import com.example.medical_records_management_system.folder_data.data_doctor;
 import com.example.medical_records_management_system.folder_logged_in.func_keep_logged_in;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXCheckBox;

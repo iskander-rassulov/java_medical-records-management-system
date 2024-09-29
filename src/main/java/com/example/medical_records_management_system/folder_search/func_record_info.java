@@ -1,17 +1,15 @@
 package com.example.medical_records_management_system.folder_search;
 
-import com.example.medical_records_management_system.data_doctor;
-import com.example.medical_records_management_system.data_medical_records;
-import com.example.medical_records_management_system.data_patients;
+import com.example.medical_records_management_system.folder_data.data_doctor;
+import com.example.medical_records_management_system.folder_data.data_medical_records;
+import com.example.medical_records_management_system.folder_data.data_patients;
 import com.example.medical_records_management_system.folder_database.database_handler;
 import com.example.medical_records_management_system.folder_login_page.func_check_login_data;
-import com.example.medical_records_management_system.folder_main.func_log_out;
 import com.example.medical_records_management_system.folder_patient.func_open_patient_info;
 import com.jfoenix.controls.JFXButton;
 import javafx.fxml.FXML;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
-import javafx.stage.Stage;
 
 public class func_record_info {
     @FXML

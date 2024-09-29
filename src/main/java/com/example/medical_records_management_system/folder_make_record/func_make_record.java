@@ -1,6 +1,6 @@
 package com.example.medical_records_management_system.folder_make_record;
 
-import com.example.medical_records_management_system.data_doctor;
+import com.example.medical_records_management_system.folder_data.data_doctor;
 import com.example.medical_records_management_system.folder_database.database_handler;
 import com.example.medical_records_management_system.folder_login_page.func_check_login_data;
 import com.jfoenix.controls.JFXButton;

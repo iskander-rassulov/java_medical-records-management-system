@@ -1,14 +1,11 @@
 package com.example.medical_records_management_system.folder_database;
 
-import com.example.medical_records_management_system.data_doctor;
-import com.example.medical_records_management_system.data_medical_records;
-import com.example.medical_records_management_system.data_patients;
+import com.example.medical_records_management_system.folder_data.data_medical_records;
+import com.example.medical_records_management_system.folder_data.data_patients;
 
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
-
-import static org.postgresql.jdbc.EscapedFunctions.USER;
 
 public class database_handler {
 

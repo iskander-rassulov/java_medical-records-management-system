@@ -1,16 +1,13 @@
 package com.example.medical_records_management_system.folder_main;
 
 import com.example.medical_records_management_system.AppContext;
-import com.example.medical_records_management_system.data_doctor;
+import com.example.medical_records_management_system.folder_data.data_doctor;
 import com.example.medical_records_management_system.folder_calendar.func_open_calendar_view;
 import com.example.medical_records_management_system.folder_make_record.func_open_view_make_record;
 import com.example.medical_records_management_system.folder_patient.func_open_patient_view;
 import com.example.medical_records_management_system.folder_search.func_open_search_view;
-import com.example.medical_records_management_system.func_current_date;
-import com.example.medical_records_management_system.func_user_profile;
 import com.jfoenix.controls.JFXButton;
 import javafx.fxml.FXML;
-import javafx.scene.Parent;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;

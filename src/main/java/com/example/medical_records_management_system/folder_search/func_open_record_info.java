@@ -1,8 +1,6 @@
 package com.example.medical_records_management_system.folder_search;
 
-import com.example.medical_records_management_system.data_medical_records;
-import com.example.medical_records_management_system.data_patients;
-import com.example.medical_records_management_system.folder_patient.func_patient_info;
+import com.example.medical_records_management_system.folder_data.data_medical_records;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.layout.AnchorPane;
 

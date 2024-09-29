@@ -1,6 +1,6 @@
 package com.example.medical_records_management_system.folder_logged_in;
 
-import com.example.medical_records_management_system.data_doctor;
+import com.example.medical_records_management_system.folder_data.data_doctor;
 
 import java.io.File;
 import java.io.FileWriter;

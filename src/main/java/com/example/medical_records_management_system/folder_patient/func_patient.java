@@ -1,15 +1,13 @@
 package com.example.medical_records_management_system.folder_patient;
 
 import com.example.medical_records_management_system.AppContext;
-import com.example.medical_records_management_system.data_medical_records;
-import com.example.medical_records_management_system.data_patients;
+import com.example.medical_records_management_system.folder_data.data_patients;
 import com.example.medical_records_management_system.folder_main.controller_main;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
-import javafx.scene.layout.AnchorPane;
 
 public class func_patient {
     @FXML

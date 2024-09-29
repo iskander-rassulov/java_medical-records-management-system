@@ -1,6 +1,6 @@
 package com.example.medical_records_management_system.folder_search;
 
-import com.example.medical_records_management_system.data_medical_records;
+import com.example.medical_records_management_system.folder_data.data_medical_records;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.scene.control.TableView;

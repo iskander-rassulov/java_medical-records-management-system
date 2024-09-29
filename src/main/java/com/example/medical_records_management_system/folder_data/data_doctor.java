@@ -1,4 +1,4 @@
-package com.example.medical_records_management_system;
+package com.example.medical_records_management_system.folder_data;
 
 public class data_doctor {
     private static int doctorId;

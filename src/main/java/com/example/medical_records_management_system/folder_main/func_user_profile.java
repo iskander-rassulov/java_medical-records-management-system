@@ -1,12 +1,10 @@
-package com.example.medical_records_management_system;
+package com.example.medical_records_management_system.folder_main;
 
+import com.example.medical_records_management_system.folder_data.data_doctor;
 import com.example.medical_records_management_system.folder_database.database_handler;
-import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.text.Text;
-
-import java.util.Objects;
 
 public class func_user_profile {
 

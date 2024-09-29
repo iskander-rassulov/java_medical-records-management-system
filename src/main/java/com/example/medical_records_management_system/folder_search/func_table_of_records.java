@@ -1,10 +1,8 @@
 package com.example.medical_records_management_system.folder_search;
 
-import com.example.medical_records_management_system.data_doctor;
-import com.example.medical_records_management_system.data_medical_records;
-import com.example.medical_records_management_system.data_patients;
+import com.example.medical_records_management_system.folder_data.data_doctor;
+import com.example.medical_records_management_system.folder_data.data_medical_records;
 import com.example.medical_records_management_system.folder_database.database_handler;
-import com.example.medical_records_management_system.folder_patient.func_open_patient_info;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.scene.control.*;
