@@ -3,6 +3,7 @@ package com.example.medical_records_management_system.folder_management;
 import com.jfoenix.controls.JFXButton;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
+import javafx.scene.text.Text;
 
 public class func_manage_modify_patient {
     @FXML
@@ -21,9 +22,17 @@ public class func_manage_modify_patient {
     public TextField valAddress;
     @FXML
     public JFXButton buttonSave;
+    @FXML
+    public Text text_modified_patients;
 
     public void initialize(){
+        
+        buttonSave.setOnMouseClicked(even->{
 
+
+            text_modified_patients.setVisible(true);
+        });
+        
     }
 
 }

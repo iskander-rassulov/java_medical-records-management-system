@@ -13,7 +13,7 @@ public class func_manage_patient {
     @FXML
     public JFXButton buttonDeletePatient;
     @FXML
-    public Text text_deleted_record;
+    public Text text_deleted_patient;
 
 
 
@@ -25,12 +25,12 @@ public class func_manage_patient {
 
         buttonDeletePatient.setOnMouseClicked(event -> {
             // Получаем выбранный идентификатор записи
-            int recordIdToDelete = func_table_of_patients.getChosenPatientId();
+            int patientIdToDelete = func_table_of_patients.getChosenPatientId();
 
-            if (recordIdToDelete != 0) {  // Проверяем, что запись выбрана
-                text_deleted_record.setVisible(true);
+            if (patientIdToDelete != 0) {  // Проверяем, что запись выбрана
+                text_deleted_patient.setVisible(true);
                 // Удаляем запись
-                func_manage_delete_patient.deleteSelectedPatient(recordIdToDelete);
+                func_manage_delete_patient.deleteSelectedPatient(patientIdToDelete);
             } else {
                 System.out.println("Запись не выбрана.");
             }
