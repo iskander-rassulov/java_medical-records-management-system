@@ -1,3 +1,0 @@
-username=jsmith                        
-password=password2           
-keep_logged_in=true

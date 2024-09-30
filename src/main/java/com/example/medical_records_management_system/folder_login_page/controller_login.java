@@ -3,6 +3,7 @@ package com.example.medical_records_management_system.folder_login_page;
 
 import com.example.medical_records_management_system.folder_data.data_doctor;
 import com.example.medical_records_management_system.folder_logged_in.func_keep_logged_in;
+import com.example.medical_records_management_system.folder_sign_up.func_open_sign_up;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXCheckBox;
 import javafx.application.Platform;
@@ -58,6 +59,11 @@ public class controller_login {
                 } else {
                     incorrect_data.setVisible(true);
                 }
+            });
+
+            button_sign_up.setOnAction(event->{
+                func_open_sign_up funcOpenSignUp = new func_open_sign_up();
+                funcOpenSignUp.showSignUp(pane_right);
             });
         }
     }

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="720.0" prefWidth="640.0" style="-fx-background-color: #0077b6;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.medical_records_management_system.folder_sign_up.func_sign_up_done">
+   <children>
+      <Text fill="WHITE" layoutX="78.0" layoutY="182.0" strokeType="OUTSIDE" strokeWidth="0.0" text="WELCOME" AnchorPane.leftAnchor="75.0" AnchorPane.topAnchor="200.0">
+         <font>
+            <Font size="48.0" />
+         </font>
+      </Text>
+      <Text fx:id="text_full_name" fill="WHITE" layoutX="78.0" layoutY="226.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name Surname" AnchorPane.leftAnchor="80.0" AnchorPane.topAnchor="260.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <ImageView fx:id="imageView" fitHeight="150.0" fitWidth="150.0" layoutX="78.0" layoutY="248.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="80.0" AnchorPane.topAnchor="300.0">
+         <image>
+            <Image url="@../../../../../../../../Documents/System%20Folders/avatar-icon-512x512-gu21ei4u.png" />
+         </image>
+      </ImageView>
+      <Line endX="400.0" layoutX="176.0" layoutY="89.0" startX="-100.0" stroke="WHITE" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="70.0" AnchorPane.topAnchor="90.0" />
+      <Line endX="400.0" layoutX="170.0" layoutY="563.0" startX="-100.0" stroke="WHITE" AnchorPane.bottomAnchor="90.0" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="70.0" />
+      <Text fill="#bcbcbc" layoutX="145.0" layoutY="611.0" strokeType="OUTSIDE" strokeWidth="0.0" text="enter your username and password on the left side of the program" AnchorPane.bottomAnchor="100.0" />
+   </children>
+</AnchorPane>
