@@ -7,6 +7,7 @@ public class AppContext {
     private static AppContext instance = null;
     private controller_main mainController;
     private AnchorPane rightPane;
+    private AnchorPane centerPane;
 
     // Приватный конструктор, чтобы обеспечить Singleton
     private AppContext() {}
@@ -38,5 +39,14 @@ public class AppContext {
     public AnchorPane getRightPane() {
         return rightPane;
     }
+
+    public void setCenterPane(AnchorPane centerPane) {
+        this.centerPane = centerPane; // Add the new pane
+    }
+
+    public AnchorPane getCenterPane(){
+        return centerPane;
+    }
+
 }
 

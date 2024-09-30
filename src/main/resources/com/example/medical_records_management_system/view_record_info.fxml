@@ -85,7 +85,7 @@
             <Text fx:id="valTreatmentPlan" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="valTreatmentPlan" />
          </children>
       </TextFlow>
-      <JFXButton layoutX="40.0" layoutY="616.0" prefHeight="25.0" prefWidth="300.0" style="-fx-font-size: 14;" text="🔨 Manage Record Information" textFill="WHITE" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="500.0" />
+      <JFXButton fx:id="button_manage_record_information" layoutX="40.0" layoutY="616.0" prefHeight="25.0" prefWidth="300.0" style="-fx-font-size: 14;" text="🔨 Manage Record Information" textFill="WHITE" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="500.0" />
       <JFXButton fx:id="buttonOpenPatientCard" layoutX="50.0" layoutY="626.0" prefHeight="25.0" prefWidth="300.0" style="-fx-font-size: 14;" text="🔍 Open Patient Card" textFill="WHITE" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="550.0" />
    </children>
 </AnchorPane>

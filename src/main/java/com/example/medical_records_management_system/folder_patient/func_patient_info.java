@@ -1,13 +1,18 @@
 package com.example.medical_records_management_system.folder_patient;
 
+import com.example.medical_records_management_system.AppContext;
 import com.example.medical_records_management_system.folder_data.data_medical_records;
 import com.example.medical_records_management_system.folder_data.data_patients;
 import com.example.medical_records_management_system.folder_database.database_handler;
+import com.example.medical_records_management_system.folder_management.func_open_manage_patient;
 import com.example.medical_records_management_system.folder_search.func_open_record_info;
 import com.jfoenix.controls.JFXButton;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
+
+import java.io.IOException;
 
 public class func_patient_info {
     @FXML
@@ -47,6 +52,17 @@ public class func_patient_info {
                     }
                 }
         );
+
+        button_patient_manage_patient_info.setOnMouseClicked(event -> {
+            func_open_manage_patient openManagePatient = new func_open_manage_patient();
+            openManagePatient.showManagePatientMenu(AppContext.getInstance().getCenterPane());
+        });
+
+
+
+
+
+
     }
 
     // Метод для установки данных о докторе

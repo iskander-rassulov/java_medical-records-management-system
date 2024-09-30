@@ -56,6 +56,7 @@ public class controller_main {
         // Устанавливаем controller_main и right_pane в com.example.medical_records_management_system.AppContext
         AppContext.getInstance().setMainController(this);
         AppContext.getInstance().setRightPane(right_pane);
+        AppContext.getInstance().setCenterPane(center_pane);
 
 
         System.out.println("right_pane: " + right_pane);  // Добавьте это для проверки
@@ -102,8 +103,6 @@ public class controller_main {
         this.doctorData = doctorData;
         // Вызов метода обновления профиля из func_user_profile
         userProfile.updateProfile(doctorData, text_full_name, image_icon, text_speciality);
-
     }
-
 
 }
