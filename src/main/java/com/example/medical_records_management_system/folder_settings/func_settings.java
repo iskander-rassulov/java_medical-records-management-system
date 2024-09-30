@@ -22,6 +22,7 @@ import java.sql.SQLException;
 public class func_settings {
     @FXML
     public Text text_changes_saved;
+    public Text text_old_password;
     @FXML
     private ImageView valImageView;
     @FXML
@@ -62,7 +63,9 @@ public class func_settings {
             if (!oldPassword.isEmpty() && !newPassword.isEmpty()) {
                 if (checkOldPassword(oldPassword)) {
                     updatePassword(newPassword);
+                    text_old_password.setVisible(false);
                 } else {
+                    text_old_password.setVisible(true);
                     System.out.println("Старый пароль неверен.");
                 }
             }

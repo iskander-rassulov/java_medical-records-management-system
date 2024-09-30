@@ -1,10 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
 <AnchorPane prefHeight="680.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.medical_records_management_system.folder_calendar.func_calendar">
-   <children>
-      <Text layoutX="270.0" layoutY="318.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CALENDAR" />
-   </children>
+
+      <DatePicker fx:id="date_picker" layoutX="150.0" layoutY="132.0" prefWidth="300.0" AnchorPane.topAnchor="130.0" />
+      <Text layoutX="265.0" layoutY="78.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Calendar" textAlignment="CENTER" AnchorPane.topAnchor="60.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text fill="#727272" layoutX="150.0" layoutY="111.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Look at all the recordings for the selected day " AnchorPane.leftAnchor="150.0" AnchorPane.topAnchor="100.0" />
+
+
+   <TableView fx:id="table_view_calendar" layoutX="50.0" layoutY="190.0" prefHeight="300.0" prefWidth="500.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="190.0">
+      <columns>
+         <TableColumn fx:id="column_date" prefWidth="94.0" text="Date" />
+         <TableColumn fx:id="column_record" prefWidth="71.0" text="Record" />
+         <TableColumn fx:id="column_patient" prefWidth="66.0" text="Patient" />
+         <TableColumn fx:id="column_diagnosis" prefWidth="105.0" text="Diagnosis" />
+         <TableColumn fx:id="column_treatment" prefWidth="163.0" text="Treatment Plan" />
+      </columns>
+   </TableView>
 </AnchorPane>
