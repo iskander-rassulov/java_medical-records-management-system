@@ -7,6 +7,7 @@ import com.jfoenix.controls.JFXButton;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import javafx.scene.text.Text;
 
 import java.sql.*;
 
@@ -33,6 +34,8 @@ public class func_make_record {
     public TextArea valTreatmentPlan;
     @FXML
     public JFXButton buttonSave;
+    @FXML
+    public Text text_record_created;
 
     @FXML
     public void initialize() {
@@ -48,7 +51,7 @@ public class func_make_record {
             String visitDate = valVisitDate.getText();
             String diagnosis = valDiagnosis.getText();
             String treatmentPlan = valTreatmentPlan.getText();
-
+            text_record_created.setVisible(true);
             // Вызов функции для создания записи
             createRecord(firstName, secondName, diagnosis, treatmentPlan, visitDate, dateOfBirth, gender, phoneNumber, email, address);
         });

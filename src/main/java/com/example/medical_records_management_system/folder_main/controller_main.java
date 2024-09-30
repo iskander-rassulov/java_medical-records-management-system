@@ -6,6 +6,7 @@ import com.example.medical_records_management_system.folder_calendar.func_open_c
 import com.example.medical_records_management_system.folder_make_record.func_open_view_make_record;
 import com.example.medical_records_management_system.folder_patient.func_open_patient_view;
 import com.example.medical_records_management_system.folder_search.func_open_search_view;
+import com.example.medical_records_management_system.folder_settings.func_open_settings;
 import com.jfoenix.controls.JFXButton;
 import javafx.fxml.FXML;
 import javafx.scene.image.ImageView;
@@ -94,6 +95,11 @@ public class controller_main {
         button_make_record.setOnAction(event ->{
             func_open_view_make_record openMake = new func_open_view_make_record();
             openMake.showMakeRecord(center_pane);
+        });
+
+        button_setting.setOnAction(event -> {
+            func_open_settings openSettings = new func_open_settings();
+            openSettings.showSettings(center_pane);
         });
 
     }
