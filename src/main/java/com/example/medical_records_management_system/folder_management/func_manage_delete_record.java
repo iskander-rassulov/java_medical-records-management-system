@@ -34,6 +34,4 @@ public class func_manage_delete_record {
             e.printStackTrace();
         }
     }
-
-
 }

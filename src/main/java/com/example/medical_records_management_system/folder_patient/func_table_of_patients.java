@@ -15,6 +15,7 @@ import java.util.List;
 public class func_table_of_patients {
     private final database_handler dbHandler = new database_handler();
     private final func_open_patient_info patientInfoOpener = new func_open_patient_info();
+    public static int chosenPatientId;
 
 
 
@@ -54,6 +55,7 @@ public class func_table_of_patients {
                     func_open_patient_info patientInfoOpener = new func_open_patient_info();
                     assert rightPane != null;
                     patientInfoOpener.showPatientInfo(rightPane, selectedPatient);  // Передаем right_pane
+                    chosenPatientId = selectedPatient.getPatientId();
                 }
             }
         });
@@ -79,5 +81,8 @@ public class func_table_of_patients {
         return recordObservableList;
     }
 
+    public static int getChosenPatientId(){
+        return chosenPatientId;
+    }
 
 }
