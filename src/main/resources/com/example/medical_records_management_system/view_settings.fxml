@@ -51,5 +51,6 @@
       <Text fill="#757575" layoutX="252.0" layoutY="344.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter new data" textAlignment="CENTER" AnchorPane.topAnchor="360.0" />
       <Text fill="#757575" layoutX="115.0" layoutY="514.0" strokeType="OUTSIDE" strokeWidth="0.0" text="In order to change your password, be sure to enter your old password" AnchorPane.topAnchor="520.0" />
       <Text fill="#757575" layoutX="242.0" layoutY="109.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Change profile photo" AnchorPane.topAnchor="100.0" />
+      <Text fx:id="text_changes_saved" fill="#4e9051" layoutX="259.0" layoutY="626.0" strokeType="OUTSIDE" strokeWidth="0.0" style="visibility: false;" text="Changes saved" AnchorPane.bottomAnchor="50.0" />
    </children>
 </AnchorPane>

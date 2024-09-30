@@ -58,6 +58,9 @@ public class controller_main {
         AppContext.getInstance().setMainController(this);
         AppContext.getInstance().setRightPane(right_pane);
         AppContext.getInstance().setCenterPane(center_pane);
+        AppContext.getInstance().setTextFullName(text_full_name);
+        AppContext.getInstance().setTextSpeciality(text_speciality);
+        AppContext.getInstance().setImageIcon(image_icon);
 
 
         System.out.println("right_pane: " + right_pane);  // Добавьте это для проверки

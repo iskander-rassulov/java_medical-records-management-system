@@ -1,13 +1,20 @@
 package com.example.medical_records_management_system;
 
 import com.example.medical_records_management_system.folder_main.controller_main;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.text.Text;
+
 
 public class AppContext {
     private static AppContext instance = null;
     private controller_main mainController;
     private AnchorPane rightPane;
     private AnchorPane centerPane;
+
+    private ImageView imageView;
+    private Text fullName;
+    private Text speciality;
 
     // Приватный конструктор, чтобы обеспечить Singleton
     private AppContext() {}
@@ -46,6 +53,30 @@ public class AppContext {
 
     public AnchorPane getCenterPane(){
         return centerPane;
+    }
+
+    public void setImageIcon(ImageView imageIcon){
+        this.imageView = imageIcon;
+    }
+
+    public ImageView getImageIcon(){
+        return imageView;
+    }
+
+    public void setTextFullName(Text fullName){
+        this.fullName = fullName;
+    }
+
+    public Text getFullName(){
+        return fullName;
+    }
+
+    public void setTextSpeciality(Text speciality){
+        this.speciality = speciality;
+    }
+
+    public Text getSpeciality(){
+        return speciality;
     }
 
 }

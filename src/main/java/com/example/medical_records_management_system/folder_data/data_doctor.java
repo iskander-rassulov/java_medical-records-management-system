@@ -5,7 +5,7 @@ public class data_doctor {
     private String firstName;
     private String lastName;
     private String username;
-    private String password;
+    private static String password;
     private String imageIcon;
     private String speciality;
 
@@ -42,7 +42,7 @@ public class data_doctor {
         this.username = username;
     }
 
-    public String getPassword() {
+    public static String getPassword() {
         return password;
     }
 
