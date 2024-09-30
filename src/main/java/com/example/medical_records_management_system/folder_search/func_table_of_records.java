@@ -9,11 +9,15 @@ import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
 
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
 import java.util.List;
 
 public class func_table_of_records {
 
     private final database_handler dbHandler = new database_handler();
+    public static int chosenRecordId;
 
     public ObservableList<data_medical_records> initializeTable(TableView<data_medical_records> table_view_search,
                                                                 TableColumn<data_medical_records, String> column_date,
@@ -51,10 +55,11 @@ public class func_table_of_records {
             if (event.getClickCount() == 2) {  // Двойной щелчок
                 data_medical_records selectedRecord = table_view_search.getSelectionModel().getSelectedItem();
                 if (selectedRecord != null) {
-                    System.out.println("Запись выбрана: " + selectedRecord.getMedicalRecordId());  // Проверка
+                    System.out.println("Запись выбрана: " + selectedRecord.getMedicalRecordId());// Проверка
                     func_open_record_info recordInfo = new func_open_record_info();
                     assert rightPane != null;
                     recordInfo.showRecordInfo(rightPane, selectedRecord);  // Передаем right_pane
+                    chosenRecordId = selectedRecord.getMedicalRecordId();
                 }
             }
         });
@@ -78,6 +83,11 @@ public class func_table_of_records {
 
         return recordObservableList;
     }
+
+    public static int getChosenRecordId(){
+        return chosenRecordId;
+    }
+
 }
 
 

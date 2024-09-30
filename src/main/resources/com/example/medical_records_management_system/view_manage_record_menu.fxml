@@ -14,5 +14,10 @@
       </Text>
       <JFXButton fx:id="buttonChangeInformation" layoutX="100.0" layoutY="172.0" prefHeight="40.0" prefWidth="400.0" style="-fx-font-size: 16; -fx-background-color: #0077b6; -fx-background-radius: 20; -fx-border-radius: 20; -fx-text-fill: #ffffff;" text="🔧 Modify information" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="170.0" />
       <JFXButton fx:id="buttonDeleteRecord" layoutX="110.0" layoutY="182.0" prefHeight="40.0" prefWidth="400.0" style="-fx-font-size: 16; -fx-background-color: #0077b6; -fx-background-radius: 20; -fx-border-radius: 20; -fx-text-fill: #ffffff;" text="🗙 Delete record" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="240.0" />
+      <Text fx:id="text_deleted_record" fill="#9a9a9a" layoutX="239.0" layoutY="334.0" strokeType="OUTSIDE" strokeWidth="0.0" style="visibility: false;" text="Record deleted" textAlignment="CENTER" AnchorPane.topAnchor="310.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
    </children>
 </AnchorPane>
