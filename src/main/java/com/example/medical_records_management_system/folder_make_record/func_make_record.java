@@ -81,6 +81,8 @@ public class func_make_record {
 
         // Вставляем новую медицинскую запись
         insertNewMedicalRecord(medicalRecordId, patientId, doctorId, diagnosis, treatmentPlan, visitDateSql);
+
+        updatePatientRecordId(patientId, medicalRecordId);
     }
 
 
@@ -136,6 +138,18 @@ public class func_make_record {
             statement.setString(4, diagnosis);
             statement.setString(5, treatmentPlan);
             statement.setDate(6, visitDate); // Использование java.sql.Date для даты визита
+            statement.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void updatePatientRecordId(int patientId, int medicalRecordId) {
+        String query = "UPDATE patients SET medical_record_id = ? WHERE patient_id = ?";
+        try (Connection connection = database_handler.getConnection();
+             PreparedStatement statement = connection.prepareStatement(query)) {
+            statement.setInt(1, medicalRecordId);
+            statement.setInt(2, patientId);
             statement.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();
