@@ -1,3 +1,0 @@
-username=lenkonw                       
-password=passw123            
-keep_logged_in=true

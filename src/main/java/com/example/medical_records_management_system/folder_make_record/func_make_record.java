@@ -40,9 +40,14 @@ public class func_make_record {
     public DatePicker valVisitDate;
     @FXML
     public DatePicker valDateOfBirth;
+    @FXML
+    public Text text_warning;
 
     @FXML
     public void initialize() {
+
+        text_warning.setVisible(false);
+
         buttonSave.setOnAction(event -> {
             // Считать данные пользователя
             String firstName = valFirstName.getText();
@@ -55,9 +60,23 @@ public class func_make_record {
             LocalDate visitDate = valVisitDate.getValue();
             String diagnosis = valDiagnosis.getText();
             String treatmentPlan = valTreatmentPlan.getText();
-            text_record_created.setVisible(true);
-            // Вызов функции для создания записи
-            createRecord(firstName, secondName, diagnosis, treatmentPlan, visitDate, dateOfBirth, gender, phoneNumber, email, address);
+            text_warning.setVisible(false);
+
+            // Проверка на обязательное заполнение полей
+            if (firstName.isEmpty() || secondName.isEmpty() || dateOfBirth == null ||
+                    gender.isEmpty() || phoneNumber.isEmpty() || email.isEmpty() ||
+                    address.isEmpty() || visitDate == null || diagnosis.isEmpty() ||
+                    treatmentPlan.isEmpty()) {
+
+                // Показать предупреждение
+                text_warning.setVisible(true);
+            } else {
+                // Если проверка пройдена, скрываем предупреждение и создаем запись
+                text_warning.setVisible(false);
+                // Вызов функции для создания записи
+                text_record_created.setVisible(true);
+                createRecord(firstName, secondName, diagnosis, treatmentPlan, visitDate, dateOfBirth, gender, phoneNumber, email, address);
+            }
         });
     }
 
@@ -84,8 +103,6 @@ public class func_make_record {
 
         updatePatientRecordId(patientId, medicalRecordId);
     }
-
-
 
     // Метод для генерации уникального ID
     private int generateUniqueId(String tableName, String columnName) {
