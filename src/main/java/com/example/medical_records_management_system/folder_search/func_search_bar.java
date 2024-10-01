@@ -23,7 +23,8 @@ public class func_search_bar {
                         if (String.valueOf(record.getPatientId()).contains(newValue.toLowerCase()) ||
                                 record.getDiagnosis().toLowerCase().contains(newValue.toLowerCase()) ||
                                 record.getTreatmentPlan().toLowerCase().contains(newValue.toLowerCase()) ||
-                                record.getVisitDate().toLowerCase().contains(newValue.toLowerCase())) {
+                                record.getVisitDate().toLowerCase().contains(newValue.toLowerCase()) ||
+                                String.valueOf(record.getMedicalRecordId()).contains(newValue.toLowerCase()) ) {
                             filteredRecords.add(record);
                         }
                     }
