@@ -37,22 +37,12 @@
          <children>
             <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="First Name:   " GridPane.halignment="RIGHT" GridPane.valignment="CENTER">
                <font>
-                  <Font size="18.0" />
-               </font>
-            </Text>
-            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Second Name:   " GridPane.columnIndex="3" GridPane.halignment="RIGHT" GridPane.valignment="CENTER">
-               <font>
-                  <Font size="18.0" />
-               </font>
-            </Text>
-            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Username:   " GridPane.halignment="RIGHT" GridPane.rowIndex="2" GridPane.valignment="CENTER">
-               <font>
-                  <Font size="18.0" />
+                  <Font size="16.0" />
                </font>
             </Text>
             <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Password:   " GridPane.columnIndex="3" GridPane.halignment="RIGHT" GridPane.rowIndex="2" GridPane.valignment="CENTER">
                <font>
-                  <Font size="18.0" />
+                  <Font size="16.0" />
                </font>
             </Text>
             <TextField fx:id="valFirstName" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.valignment="CENTER" />
@@ -62,7 +52,17 @@
             <ComboBox fx:id="valMenuItem" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
             <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Speciality:   " GridPane.halignment="RIGHT" GridPane.rowIndex="4" GridPane.valignment="CENTER">
                <font>
-                  <Font size="18.0" />
+                  <Font size="16.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Username:   " GridPane.columnIndex="3" GridPane.halignment="RIGHT" GridPane.valignment="CENTER">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Second Name:   " textAlignment="RIGHT" GridPane.halignment="RIGHT" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+               <font>
+                  <Font size="16.0" />
                </font>
             </Text>
          </children>

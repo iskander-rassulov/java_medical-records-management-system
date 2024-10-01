@@ -17,7 +17,6 @@ import javafx.stage.Stage;
 
 public class controller_login {
 
-    func_login_image funcLoginImage = new func_login_image();
     func_open_main_view funcOpenMainView = new func_open_main_view();
 
     public AnchorPane pane_left;
@@ -33,7 +32,6 @@ public class controller_login {
     public JFXCheckBox check_box_keep_logged_in;
 
     public void initialize() {
-        funcLoginImage.setLoginImage(image_hospital);
 
         // Проверка на сохраненные данные
         if (func_check_login_data.isLoggedIn()) {

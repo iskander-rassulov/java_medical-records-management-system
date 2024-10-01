@@ -5,6 +5,7 @@
 <?import javafx.scene.control.Hyperlink?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
@@ -52,7 +53,10 @@
    <right>
       <AnchorPane fx:id="pane_right" prefHeight="720.0" prefWidth="640.0" style="-fx-background-color: #0077b6;" BorderPane.alignment="CENTER">
          <children>
-            <ImageView fx:id="image_hospital" fitHeight="300.0" fitWidth="400.0" layoutX="120.0" layoutY="210.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="image_hospital" fitHeight="300.0" fitWidth="300.0" layoutX="170.0" layoutY="210.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="170.0" AnchorPane.rightAnchor="170.0" AnchorPane.topAnchor="210.0">
+               <image>
+                  <Image url="@../../../../../../../../Documents/System%20Folders/emt-health-care-caduceus-blue-medical-symbol-mug.jpg" />
+               </image></ImageView>
             <Text fill="WHITE" layoutX="165.0" layoutY="172.0" strokeType="OUTSIDE" strokeWidth="0.0" text="WELCOME BACK" AnchorPane.rightAnchor="170.0" AnchorPane.topAnchor="130.0">
                <font>
                   <Font size="42.0" />
