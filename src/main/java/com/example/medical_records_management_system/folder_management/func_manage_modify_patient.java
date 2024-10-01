@@ -4,6 +4,7 @@ import com.example.medical_records_management_system.folder_database.database_ha
 import com.example.medical_records_management_system.folder_patient.func_table_of_patients;
 import com.jfoenix.controls.JFXButton;
 import javafx.fxml.FXML;
+import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
 
@@ -13,12 +14,12 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.time.LocalDate;
 
 public class func_manage_modify_patient {
     @FXML
     public TextField valFirstName;
-    @FXML
-    public TextField valDateOfBirth;
+
     @FXML
     public TextField valSecondName;
     @FXML
@@ -33,7 +34,8 @@ public class func_manage_modify_patient {
     public JFXButton buttonSave;
     @FXML
     public Text text_modified_patients;
-
+    @FXML
+    public DatePicker valDateOfBirth;
 
 
     public void initialize() {
@@ -43,7 +45,8 @@ public class func_manage_modify_patient {
             // Получаем данные из текстовых полей
             String firstName = valFirstName.getText();
             String secondName = valSecondName.getText();
-            String dateOfBirthStr = valDateOfBirth.getText();
+            LocalDate dateOfBirthStr = valDateOfBirth.getValue();
+//            String dateOfBirthStr = valDateOfBirth.getText();
             String gender = valGender.getText();
             String phoneNumber = valPhoneNumber.getText();
             String email = valEmail.getText();
@@ -59,7 +62,7 @@ public class func_manage_modify_patient {
         });
     }
 
-    private void updatePatient(int patientId, String firstName, String secondName, String dateOfBirthStr, String gender, String phoneNumber, String email, String address) {
+    private void updatePatient(int patientId, String firstName, String secondName, LocalDate dateOfBirthStr, String gender, String phoneNumber, String email, String address) {
         StringBuilder updateSQL = new StringBuilder("UPDATE patients SET ");
         boolean firstField = true;
 
@@ -73,7 +76,7 @@ public class func_manage_modify_patient {
             updateSQL.append("second_name = ?");
             firstField = false;
         }
-        if (dateOfBirthStr != null && !dateOfBirthStr.isEmpty()) {
+        if (dateOfBirthStr != null) {
             if (!firstField) updateSQL.append(", ");
             updateSQL.append("date_of_birth = ?");
             firstField = false;
@@ -111,8 +114,8 @@ public class func_manage_modify_patient {
             if (secondName != null && !secondName.isEmpty()) {
                 preparedStatement.setString(paramIndex++, secondName);
             }
-            if (dateOfBirthStr != null && !dateOfBirthStr.isEmpty()) {
-                preparedStatement.setDate(paramIndex++, parseDate(dateOfBirthStr));  // Преобразуем строку в SQL Date
+            if (dateOfBirthStr != null) {
+                preparedStatement.setDate(paramIndex++, java.sql.Date.valueOf(dateOfBirthStr)); // Преобразуем LocalDate в SQL Date
             }
             if (gender != null && !gender.isEmpty()) {
                 preparedStatement.setString(paramIndex++, gender);
@@ -137,7 +140,7 @@ public class func_manage_modify_patient {
                 System.out.println("Не удалось обновить информацию о пациенте.");
             }
 
-        } catch (SQLException | ParseException e) {
+        } catch (SQLException e) {
             e.printStackTrace();
         }
     }

@@ -22,6 +22,7 @@ import java.sql.SQLException;
 public class func_settings {
     @FXML
     public Text text_changes_saved;
+    @FXML
     public Text text_old_password;
     @FXML
     private ImageView valImageView;
