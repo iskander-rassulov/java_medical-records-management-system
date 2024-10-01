@@ -5,17 +5,18 @@ import com.example.medical_records_management_system.folder_database.database_ha
 import com.example.medical_records_management_system.folder_login_page.func_check_login_data;
 import com.jfoenix.controls.JFXButton;
 import javafx.fxml.FXML;
+import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
 
 import java.sql.*;
+import java.time.LocalDate;
 
 public class func_make_record {
     @FXML
     public TextField valFirstName;
-    @FXML
-    public TextField valDateOfBirth;
+
     @FXML
     public TextField valSecondName;
     @FXML
@@ -26,8 +27,7 @@ public class func_make_record {
     public TextField valEmail;
     @FXML
     public TextField valAddress;
-    @FXML
-    public TextField valVisitDate;
+
     @FXML
     public TextField valDiagnosis;
     @FXML
@@ -36,6 +36,10 @@ public class func_make_record {
     public JFXButton buttonSave;
     @FXML
     public Text text_record_created;
+    @FXML
+    public DatePicker valVisitDate;
+    @FXML
+    public DatePicker valDateOfBirth;
 
     @FXML
     public void initialize() {
@@ -43,12 +47,12 @@ public class func_make_record {
             // Считать данные пользователя
             String firstName = valFirstName.getText();
             String secondName = valSecondName.getText();
-            String dateOfBirth = valDateOfBirth.getText();
+            LocalDate dateOfBirth = valDateOfBirth.getValue();
             String gender = valGender.getText();
             String phoneNumber = valPhoneNumber.getText();
             String email = valEmail.getText();
             String address = valAddress.getText();
-            String visitDate = valVisitDate.getText();
+            LocalDate visitDate = valVisitDate.getValue();
             String diagnosis = valDiagnosis.getText();
             String treatmentPlan = valTreatmentPlan.getText();
             text_record_created.setVisible(true);
@@ -58,7 +62,7 @@ public class func_make_record {
     }
 
     public void createRecord(String firstName, String lastName, String diagnosis, String treatmentPlan,
-                             String visitDate, String dateOfBirth, String gender, String phoneNumber,
+                             LocalDate visitDate, LocalDate dateOfBirth, String gender, String phoneNumber,
                              String email, String address) {
         // Получаем данные доктора
         data_doctor doctor = func_check_login_data.getDoctorData();

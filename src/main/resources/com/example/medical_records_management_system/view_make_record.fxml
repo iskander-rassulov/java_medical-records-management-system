@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -31,7 +32,6 @@
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="First name:   " textAlignment="RIGHT" GridPane.halignment="RIGHT" GridPane.valignment="CENTER" />
             <TextField fx:id="valFirstName" prefHeight="30.0" prefWidth="125.0" promptText="in latin" GridPane.columnIndex="1" />
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Date of birth:   " textAlignment="RIGHT" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
-            <TextField fx:id="valDateOfBirth" prefHeight="30.0" prefWidth="125.0" promptText="YYYY-MM-DD" GridPane.columnIndex="1" GridPane.rowIndex="1" />
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Second name:   " textAlignment="RIGHT" GridPane.columnIndex="3" GridPane.halignment="RIGHT" GridPane.valignment="CENTER" />
             <TextField fx:id="valSecondName" prefHeight="30.0" prefWidth="125.0" promptText="in latin" GridPane.columnIndex="4" />
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Gender:   " textAlignment="RIGHT" GridPane.columnIndex="3" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
@@ -42,6 +42,7 @@
             <TextField fx:id="valEmail" prefHeight="30.0" prefWidth="125.0" promptText="user@email.com" GridPane.columnIndex="1" GridPane.rowIndex="3" />
             <TextField fx:id="valAddress" prefHeight="30.0" prefWidth="125.0" promptText="home address" GridPane.columnIndex="4" GridPane.rowIndex="2" />
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Address:   " GridPane.columnIndex="3" GridPane.halignment="RIGHT" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+            <DatePicker fx:id="valDateOfBirth" GridPane.columnIndex="1" GridPane.rowIndex="1" />
          </children>
       </GridPane>
       <Text layoutX="250.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Make record" AnchorPane.leftAnchor="250.0" AnchorPane.rightAnchor="250.0" AnchorPane.topAnchor="60.0">
@@ -64,8 +65,8 @@
          <children>
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Diagnosis:   " GridPane.halignment="RIGHT" GridPane.valignment="CENTER" />
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Visit date:   " textAlignment="RIGHT" GridPane.columnIndex="3" GridPane.halignment="RIGHT" GridPane.valignment="CENTER" />
-            <TextField fx:id="valVisitDate" prefHeight="30.0" prefWidth="125.0" promptText="YYYY-MM-DD" GridPane.columnIndex="4" />
             <TextField fx:id="valDiagnosis" prefHeight="30.0" prefWidth="125.0" promptText="Diagnosis" GridPane.columnIndex="1" />
+            <DatePicker fx:id="valVisitDate" GridPane.columnIndex="4" />
          </children>
       </GridPane>
       <Text fill="#404040" layoutX="220.0" layoutY="379.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Provide record information" AnchorPane.topAnchor="370.0" />
