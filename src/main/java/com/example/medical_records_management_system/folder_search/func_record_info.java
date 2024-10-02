@@ -64,7 +64,7 @@ public class func_record_info {
         valPatientId.setText(String.valueOf(dataMedicalRecords.getPatientId()));
         valDoctorId.setText(String.valueOf(dataMedicalRecords.getDoctorId()));
         valVisitDate.setText(dataMedicalRecords.getVisitDate());
-        valDiagnosis.setText(dataMedicalRecords.getDiagnosis());
+        valDiagnosis.setText(dataMedicalRecords.getDiagnosis().trim());
         valTreatmentPlan.setText(dataMedicalRecords.getTreatmentPlan());
         docAndPatientNames(dataMedicalRecords.getPatientId());
     }
