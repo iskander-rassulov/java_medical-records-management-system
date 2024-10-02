@@ -14,6 +14,9 @@ Medical Records Management System — это упрощенная система
 - Управление электронными медицинскими записями
 - Назначение встреч и управление планами лечения пациентов
 
+## Видео
+[![Видео демонстрация](https://img.youtube.com/vi/80VjwO4nTTg/maxresdefault.jpg)](https://www.youtube.com/watch?v=80VjwO4nTTg)
+
 ## Структура проекта
 - **folder_login_page**: включает коды для страницы входа:
   - `controller_login.java`: обработка логина и автологина.
