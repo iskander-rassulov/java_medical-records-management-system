@@ -73,7 +73,7 @@ public class func_manage_modify_patient {
         }
         if (secondName != null && !secondName.isEmpty()) {
             if (!firstField) updateSQL.append(", ");
-            updateSQL.append("second_name = ?");
+            updateSQL.append("last_name = ?");
             firstField = false;
         }
         if (dateOfBirthStr != null) {
