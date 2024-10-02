@@ -15,7 +15,7 @@ Medical Records Management System — это упрощенная система
 - Назначение встреч и управление планами лечения пациентов
 
 ## Видео
-[![Видео демонстрация](https://img.youtube.com/vi/80VjwO4nTTg/maxresdefault.jpg)](https://www.youtube.com/watch?v=80VjwO4nTTg)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/80VjwO4nTTg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Структура проекта
 - **folder_login_page**: включает коды для страницы входа:
