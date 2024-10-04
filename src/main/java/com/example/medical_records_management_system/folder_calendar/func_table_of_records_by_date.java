@@ -95,16 +95,20 @@ public class func_table_of_records_by_date {
         ObservableList<data_medical_records> recordList = FXCollections.observableArrayList();
 
         try {
+            // Получаем doctor_id из data_doctor (предполагая, что doctor_id уже сохранен после авторизации)
+            int doctorId = data_doctor.getDoctorId();
+
             // Преобразуем LocalDate в Date для работы с базой данных
             Date sqlDate = Date.valueOf(date);
             System.out.println(sqlDate);
 
-            // SQL-запрос для получения записей по выбранной дате
-            String query = "SELECT * FROM medical_records WHERE visit_date = ?";
+            // SQL-запрос для получения записей по выбранной дате и doctor_id
+            String query = "SELECT * FROM medical_records WHERE visit_date = ? AND doctor_id = ?";
 
             // Подготовка запроса
             PreparedStatement preparedStatement = database_handler.getConnection().prepareStatement(query);
             preparedStatement.setDate(1, sqlDate);
+            preparedStatement.setInt(2, doctorId); // Устанавливаем doctor_id в запрос
 
             ResultSet resultSet = preparedStatement.executeQuery();
 
@@ -126,6 +130,7 @@ public class func_table_of_records_by_date {
 
         return recordList;
     }
+
 
 
 }
