@@ -1,93 +1,100 @@
 # Medical Records Management System
 
-## Описание проекта
-Medical Records Management System — это упрощенная система для управления электронными медицинскими записями. Проект предоставляет возможность врачам хранить и просматривать информацию о пациентах, их диагнозах и назначениях. Пациенты могут записываться на приём к врачу, а также загружать медицинские документы.
+## Project Description
+Medical Records Management System is a simplified system for managing electronic medical records. The project enables physicians to store and view information about patients, their diagnoses and appointments. Patients can make medical appointments and upload medical records.
 
-## Технологии
-В проекте использованы следующие технологии:
-- **Java**: основной язык программирования для бизнес-логики приложения.
-- **JavaFX**: для создания пользовательского интерфейса.
-- **PostgreSQL**: база данных для хранения информации о пациентах, врачах и медицинских записях.
+## Technologies
+The following technologies are used in the project:
+- **Java**: the main programming language for the logic of the application.
+- **JavaFX**: for creating user interface.
+- **PostgreSQL**: database for storing information about patients, doctors and medical records.
 
-## Основные функции
-- Регистрация и авторизация врачей
-- Управление электронными медицинскими записями
-- Назначение встреч и управление планами лечения пациентов
+## Main Functions
+- Doctors registration and authorisation
+- Manage electronic medical records
+- Appointment scheduling and management of patient treatment plans
 
-## Структура проекта
-- **folder_login_page**: включает коды для страницы входа:
-  - `controller_login.java`: обработка логина и автологина.
-  - `func_check_login_data.java`: проверка данных для входа и автологина.
-  - `func_open_main_view.java`: переключение на главное окно.
+## Video
+| Video Demonstration |
+|:------------------:|
+| ![Screenshot](https://github.com/user-attachments/assets/f80eaf04-1467-4202-999c-2fa812774ba5)|
+| [Watch on YouTube](https://www.youtube.com/watch?v=80VjwO4nTTg) |
 
-- **folder_logged_in**: включает коды для управления автологином:
-  - `func_keep_logged_in.java`: сохраняет данные пользователя для автологина и удаляет их при необходимости.
-  - `func_check_if_logged_in.java`: проверяет статус автологина.
 
-- **folder_main**: включает коды для главного интерфейса приложения:
-  - `controller_main.java`: контроллер главного окна приложения с функциональностью для отображения данных пользователя и навигации по разделам.
-  - `func_current_date.java`: отображает текущую дату в интерфейсе.
-  - `func_log_out.java`: управляет выходом пользователя из системы.
-  - `func_user_profile.java`: обновляет профиль пользователя и отображает его данные.
+## Project structure
+- **folder_login_page**: includes codes for login page:
+  - `controller_login.java`: login and autologin processing.
+  - `func_check_login_data.java`: check login and autologin data.
+  - `func_open_main_view.java`: switch to the main window.
 
-- **folder_database**: включает коды для работы с базой данных:
-  - `database_check_in.java`: выводит данные всех докторов из базы данных.
-  - `database_configuration.java`: содержит параметры для конфигурации базы данных.
-  - `database_handler.java`: обрабатывает соединения с базой данных и взаимодействие с таблицами.
+- **folder_logged_in**: includes codes to manage autologin:
+  - `func_keep_logged_in.java`: stores user data for autologin and deletes it if necessary.
+  - `func_check_if_logged_in.java`: checks the status of autologin.
 
-- **folder_data**: включает модели данных для приложения:
-  - `data_doctor.java`: содержит информацию о докторе (ID, имя, фамилия, логин, пароль, изображение, специальность).
-  - `data_medical_records.java`: содержит информацию о медицинской записи (ID записи, ID пациента, ID доктора, дата визита, диагноз, план лечения).
-  - `data_patients.java`: содержит информацию о пациентах (ID, имя, фамилия, дата рождения, пол, контактная информация, ID медицинской записи).
+- **folder_main**: includes codes for the main application interface:
+  - `controller_main.java`: controller of the main application window with functionality to display user data and navigate through sections.
+  - `func_current_date.java`: displays the current date in the interface.
+  - `func_log_out.java`: controls user logout.
+  - `func_user_profile.java`: updates the user profile and displays user data.
 
-- **folder_search**: включает коды для поиска и отображения медицинских записей:
-  - `func_open_record_info.java`: открывает и отображает информацию о выбранной медицинской записи.
-  - `func_open_search_view.java`: загружает и отображает интерфейс поиска.
-  - `func_record_info.java`: управляет отображением данных о медицинской записи.
-  - `func_search.java`: реализует основную логику поиска по записям.
-  - `func_search_bar.java`: отвечает за работу панели поиска.
-  - `func_table_of_records.java`: отображает список записей в таблице и обрабатывает выбор записи.
+- **folder_database**: includes codes to work with the database:
+  - `database_check_in.java`: outputs data of all doctors from the database.
+  - `database_configuration.java`: contains parameters for database configuration.
+  - `database_handler.java`: handles database connections and table interactions.
 
-- **folder_patient**: включает коды для работы с информацией о пациентах:
-  - `func_open_patient_info.java`: открывает и отображает информацию о выбранном пациенте.
-  - `func_open_patient_view.java`: загружает интерфейс со списком пациентов.
-  - `func_patient.java`: отвечает за обработку данных пациентов.
-  - `func_patient_info.java`: управляет отображением подробной информации о пациенте.
-  - `func_search_bar_patients.java`: панель поиска для работы с пациентами.
-  - `func_table_of_patients.java`: отображает список пациентов в таблице и обрабатывает выбор пациента.
+- **folder_data**: includes data models for the application:
+  - `data_doctor.java`: contains information about the doctor (ID, first name, last name, login, password, image, specialty).
+  - `data_medical_records.java`: contains information about the medical record (record ID, patient ID, doctor ID, date of visit, diagnosis, treatment plan).
+  - `data_patients.java`: contains information about patients (ID, first name, last name, date of birth, gender, contact information, medical record ID).
 
-- **folder_calendar**: включает коды для работы с календарем и записями по датам:
-  - `func_calendar.java`: управляет отображением записей на выбранную дату в календаре.
-  - `func_open_calendar_view.java`: открывает интерфейс календаря.
-  - `func_table_of_records_by_date.java`: загружает и отображает медицинские записи по выбранной дате.
+- **folder_search**: includes codes to search and display medical records:
+  - `func_open_record_info.java`: opens and displays information about the selected medical record.
+  - `func_open_search_view.java`: loads and displays the search interface.
+  - `func_record_info.java`: controls the display of medical record data.
+  - `func_search.java`: implements basic record search logic.
+  - `func_search_bar.java`: is responsible for the operation of the search bar.
+  - `func_table_of_records.java`: displays a list of records in a table and handles record selection.
 
-- **folder_make_record**: включает коды для создания медицинских записей:
-  - `func_make_record.java`: обрабатывает создание новой медицинской записи с информацией о пациенте, дате визита, диагнозе и плане лечения.
-  - `func_open_view_make_record.java`: загружает и отображает интерфейс для создания новой записи.
+- **folder_patient**: includes codes for working with patient information:
+  - `func_open_patient_info.java`: opens and displays information about the selected patient.
+  - `func_open_open_patient_view.java`: loads an interface with a list of patients.
+  - `func_patient.java`: responsible for processing patient data.
+  - `func_patient_info.java`: controls the display of detailed patient information.
+  - `func_search_bar_patients.java`: search bar for patient handling.
+  - `func_table_of_patients.java`: displays a list of patients in a table and handles patient selection.
 
-- **folder_management**: включает коды для управления записями и пациентами:
-  - `func_manage_delete_record.java`: удаляет выбранную медицинскую запись и связанную информацию о пациенте.
-  - `func_manage_delete_patient.java`: удаляет выбранного пациента и его медицинские записи.
-  - `func_manage_modify_patient.java`: управляет изменениями данных пациента.
-  - `func_manage_modify_record.java`: управляет изменениями медицинских записей.
-  - `func_manage_patient.java`: управляет обработкой данных пациентов.
-  - `func_manage_record.java`: управляет обработкой данных медицинских записей.
-  - `func_open_manage_patient.java`: открывает интерфейс управления пациентами.
-  - `func_open_manage_record.java`: открывает интерфейс управления записями.
-  - `func_open_modify_patient.java`: открывает интерфейс для изменения данных пациента.
-  - `func_open_modify_record.java`: открывает интерфейс для изменения данных медицинской записи.
+- **folder_calendar**: includes codes to handle calendar and entries by date:
+  - `func_calendar.java`: controls the display of entries for the selected date in the calendar.
+  - `func_open_calendar_view.java`: opens the calendar interface.
+  - `func_table_of_records_by_date.java`: loads and displays medical records on the selected date.
 
-- **folder_settings**: включает коды для управления настройками профиля:
-  - `func_file_selector.java`: реализует выбор изображения для профиля через файловый селектор.
-  - `func_open_settings.java`: загружает и отображает интерфейс настроек.
-  - `func_settings.java`: управляет обновлением данных пользователя, таких как имя пользователя, изображение профиля и пароль.
+- **folder_make_record**: includes codes to create medical records:
+  - `func_make_record.java`: handles the creation of a new medical record with information about the patient, visit date, diagnosis, and treatment plan.
+  - `func_open_view_make_record.java`: loads and displays the interface for creating a new record.
 
-- **folder_sign_up**: включает коды для регистрации новых пользователей:
-  - `func_open_sign_up.java`: загружает и отображает интерфейс регистрации.
-  - `func_open_sign_up_done.java`: отображает экран завершения регистрации.
-  - `func_sign_up.java`: обрабатывает процесс регистрации, включая проверку данных и сохранение нового пользователя.
-  - `func_sign_up_done.java`: отображает данные нового пользователя после успешной регистрации (имя, изображение).
+- **folder_management**: includes codes for record and patient management:
+  - `func_manage_delete_record.java`: deletes the selected medical record and associated patient information.
+  - `func_manage_delete_patient.java`: deletes the selected patient and their medical records.
+  - `func_manage_modify_patient.java`: manages changes to patient data.
+  - `func_manage_modify_record.java`: manages changes to medical records.
+  - `func_manage_patient.java`: manages the processing of patient data.
+  - `func_manage_manage_record.java`: manages medical record data processing.
+  - `func_open_manage_manage_patient.java`: opens the patient management interface.
+  - `func_open_open_manage_manage_record.java`: opens the records management interface.
+  - `func_open_modify_patient.java`: opens the interface to modify patient data.
+  - `func_open_modify_record.java`: opens the interface to modify medical record data.
 
-- **AppContext.java**: Singleton-класс, который хранит общий контекст приложения. Используется для передачи данных между разными частями приложения, таких как `controller_main`, правые и центральные панели, а также данные профиля (имя, специальность, изображение).
+- **folder_settings**: includes codes to control profile settings:
+  - `func_file_selector.java`: implements image selection for a profile via a file selector.
+  - `func_open_settings.java`: loads and displays the settings interface.
+  - `func_settings.java`: handles updating user data such as username, profile image and password.
+
+- **folder_sign_up**: includes codes for registering new users:
+  - `func_open_sign_up.java`: loads and displays the registration interface.
+  - `func_open_sign_up_done.java`: displays the registration completion screen.
+  - `func_sign_up.java`: handles the registration process, including validating the data and saving the new user.
+  - `func_sign_up_done.java`: displays the new user's data after successful registration (name, image).
+
+- **AppContext.java**: Singleton class that stores the overall context of an application. Used to pass data between different parts of the application, such as `controller_main`, right and center panels, and profile data (name, specialty, image).
   
-- **Main.java**: Основной класс приложения, который запускает JavaFX интерфейс. Он загружает файл `view_login_page.fxml`, устанавливает сцену для главного окна и запускает базовую проверку данных о докторах.
+- **Main.java**: The main application class that runs the JavaFX interface. It loads the `view_login_page.fxml` file, sets the scene for the main window, and runs the basic validation of doctor data.
